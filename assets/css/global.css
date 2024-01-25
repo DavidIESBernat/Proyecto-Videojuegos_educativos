@@ -1,0 +1,15 @@
+/*CSS principal donde declarar instrucciones que se pueden utilizar en todas las vistas*/
+
+@charset "utf-8";
+
+/* Fuente predeterminada */
+@font-face {
+    font-family: Source Sans Pro,sans-serif;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+:root { /*Variables de la hoja de estilo actual*/
+    /* Colores definidos */
+    --color1: #000;
+    --color2: #FFF;
+}
