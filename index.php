@@ -1,6 +1,7 @@
 <?php
 include_once 'config/parameters.php';
 // Incluir controladores
+include_once 'controlador/principalControlador.php';
 
 if(!isset($_GET['controlador'])) {
     // Si la url no contiene un controlador se redirigira automaticamente al controlador principal

@@ -19,3 +19,4 @@ class principalControlador {
         //include_once 'vista/footer.php';
     }
 }
+?>
