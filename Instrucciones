@@ -6,3 +6,5 @@
         DocumentRoot "C:\xampp\htdocs\Proyecto-Videojuegos_educativos"
         ServerName aprendejugando.com
     </VirtualHost>
+
+3.-Importar el proyecto en la ruta htdocs
