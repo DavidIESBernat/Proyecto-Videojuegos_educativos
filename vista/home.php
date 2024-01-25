@@ -9,6 +9,7 @@
     <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-<p>Home</p>
+    <section>
 
+    </section>
 </body>

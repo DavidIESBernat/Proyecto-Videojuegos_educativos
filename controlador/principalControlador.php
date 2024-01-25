@@ -10,10 +10,10 @@ class principalControlador {
     public function index() {
 
         // Header
-        //include_once 'vista/header.php';
+        include_once 'vista/header.php';
 
         // Main
-        include_once 'vista/home.php';
+        //include_once 'vista/home.php';
 
         // Footer
         //include_once 'vista/footer.php';

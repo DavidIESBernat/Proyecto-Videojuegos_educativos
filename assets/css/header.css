@@ -1,0 +1,49 @@
+.headerContainer {
+    height: 120px;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: center;
+}
+
+.logoContainer {
+    height: 100px;
+    width: 100px;
+}
+.logoImagen {
+    border-radius: 10%;
+}
+
+.headerContainerIzquierdo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloHeader {
+    margin-left: 25px;
+    color: var(--color2);
+    font-weight: 600;
+    font-size: 40px;
+
+}
+
+.nav-final {
+    display: flex;
+    justify-content: end;
+}
+
+.botonHeader{
+    color: var(--color2);
+    border-right: 2px solid white;
+    font-size: 20px;
+
+}
+
+.ultimoBoton {
+    border-right: 0px;
+}
+
+.navContainer {
+    max-width: 1080px;
+}
