@@ -3,6 +3,7 @@
     background-color: var(--color1);
     display: flex;
     justify-content: center;
+
 }
 
 .logoContainer {
@@ -28,6 +29,10 @@
 
 }
 
+.tituloHeader:hover {
+    color: var(--color2);
+}
+
 .nav-final {
     display: flex;
     justify-content: end;
@@ -46,4 +51,6 @@
 
 .navContainer {
     max-width: 1080px;
+    display: flex;
+    align-items: center;
 }

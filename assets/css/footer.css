@@ -1,0 +1,61 @@
+.footerContainer {
+    height: 120px;
+    background-color: var(--color1);
+    margin: auto;
+}
+
+.containerContent {
+    display: flex;
+    max-width: 1080px;
+    align-items: center;
+    margin: auto;
+    height: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ContainerIzquierdo {
+    width: 100%;
+}
+
+.ContainerDerecho {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.rss {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.rss { /*Secciones circulares de las redes sociales*/
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--colorPrimario);
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .rss:hover { /*Hover de dichas secciones*/
+    border: 2px solid var(--colorSecundario);
+  }
+  .icon-rss { /*Iconos de las redes sociales*/
+    margin: auto;
+    width: 20px;
+    height: 20px;
+  }
+  .rss:hover .icon-rss { /*Hover de los iconos cuando nos encontramos sobre la seccion circular de las redes sociales*/
+    width: 25px;
+    height: 25px;
+    transition: width 0.3s ease, color 0.3s ease-out;
+    transition: height 0.3s ease, color 0.3s ease-out;
+  }

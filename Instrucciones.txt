@@ -1,4 +1,4 @@
-1.- Incluir la ruta "http://aprendejugando.com" en el archivo hosts de Windows. Nota:*Abrir archivo como administrador*.
+1.- Incluir la ruta "aprendejugando.com" en el archivo hosts de Windows. Nota:*Abrir archivo como administrador*.
 
 2.-Añadir al archivo vhosts la la ruta del proyecto: Nota: Ruta del archivo vhosts "C:\xampp\apache\conf\extra"
 

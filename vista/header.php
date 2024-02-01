@@ -28,7 +28,7 @@
                 <div class="navbar-nav marginNav">
                     <a class="nav-link botonHeader" aria-current="page" href="#">Inicio</a>
                     <a class="nav-link botonHeader" href="#">Juegos</a>
-                    <a class="nav-link botonHeader ultimoBoton" href="#">Login</a>
+                    <a class="nav-link botonHeader ultimoBoton" href="#">Iniciar Sesión</a>
                 </div>
             </div>
         </div>

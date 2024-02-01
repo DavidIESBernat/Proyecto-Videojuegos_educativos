@@ -9,7 +9,7 @@
     <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
-    <section>
-
+    <section class="mainContainer">
+    
     </section>
 </body>

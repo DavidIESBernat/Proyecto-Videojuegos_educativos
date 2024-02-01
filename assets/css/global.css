@@ -10,6 +10,36 @@
 
 :root { /*Variables de la hoja de estilo actual*/
     /* Colores definidos */
-    --color1: #000;
-    --color2: #FFF;
+    --colorFondo: #F1F1F1;
+    --colorPrimario: #FFFFFF;
+    --colorSecundario: #000000;
+    --color1: #1E1E1E;
+    --color2: #00A3FF;
+    --color3: #4DBFFF;
+    --color4: #00CC08;
+    --color5: #66CA6A;
 }
+
+body { /*Actua sobre el body definiendo el mismo*/
+    margin: auto;
+    margin-top: 120px; 
+    background-color: var(--color-fondo);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.primary {
+    color: var(--colorPrimario);
+}
+
+.secondary {
+    color: var(--colorSecundario);
+}
+
+.p-no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
