@@ -1,9 +1,8 @@
 .headerContainer {
     height: 120px;
-    background-color: var(--color1);
+    background-color: var(--colorPrimario);
     display: flex;
     justify-content: center;
-
 }
 
 .logoContainer {
@@ -29,7 +28,7 @@
 
 }
 
-.tituloHeader:hover {
+.tituloHeader:hover, .tituloHeader:active {
     color: var(--color2);
 }
 
@@ -40,9 +39,12 @@
 
 .botonHeader{
     color: var(--color2);
-    border-right: 2px solid white;
     font-size: 20px;
 
+}
+
+.botonHeader:hover, .botonHeader.active {
+    color: var(--color1);
 }
 
 .ultimoBoton {

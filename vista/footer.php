@@ -11,7 +11,7 @@
     <div class="footerContainer">
         <div class="containerContent">
             <div class="ContainerIzquierdo">
-                <p class="primary p-no-margin">Copyright 2024</p>
+                <p class="primary p-no-margin font600">Copyright 2024©</p>
             </div>
             <div class="containerDerecho">
                 <div class="flex-row">

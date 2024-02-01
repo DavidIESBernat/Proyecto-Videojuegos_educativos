@@ -23,12 +23,31 @@
 body { /*Actua sobre el body definiendo el mismo*/
     margin: auto;
     margin-top: 120px; 
-    background-color: var(--color-fondo);
+    background-color: var(--colorFondo);
 }
 
 .flex-row {
     display: flex;
     flex-direction: row;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: end;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.font600 {
+font-weight: 600;
 }
 
 .primary {
@@ -42,4 +61,15 @@ body { /*Actua sobre el body definiendo el mismo*/
 .p-no-margin {
     margin-top: 0;
     margin-bottom: 0;
-  }
+}
+
+/*Seccion de Titulo*/
+.section-title {
+    margin: auto;
+    height: 120px;
+    background-color: var(--color5);
+    color: var(--colorPrimario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
