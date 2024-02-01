@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse nav-final" id="navbarNavAltMarkup">
                 <div class="navbar-nav marginNav">
                     <a class="nav-link botonHeader" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link botonHeader" href="#">Juegos</a>
+                    <a class="nav-link botonHeader" href="?controlador=biblioteca">Juegos</a>
                     <a class="nav-link botonHeader ultimoBoton" href="#">Login</a>
                 </div>
             </div>

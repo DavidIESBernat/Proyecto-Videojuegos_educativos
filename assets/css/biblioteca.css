@@ -1,0 +1,32 @@
+.container-fluid {
+    margin: 10px 0;
+}
+/* Juegos */
+.tarjeta-juego {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+.imagen-videojuego {
+    width: 100%;
+}
+.nombre-videojuego {
+    font-size: 20px;
+    font-family: 'Barlow';
+    font-weight: 900;
+    text-align: center;
+}
+.descripcion-videojuego {
+    font-size: 14px;
+    font-family: 'Goodhome', sans-serif;
+}
+.btn-videojuego {
+    text-decoration: none;
+    background-color: #00A3FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.btn-videojuego:hover {
+    background-color: #4DBFFF;
+}
