@@ -37,12 +37,35 @@
             <h2 class="">Juegos destacados</h2>
         </div>
         <div class="seccion-contenido">
-            <section class="elemento"></section>
-            <section class="elemento"></section>
-            <section class="elemento"></section>
+            <a href="" class="elemento">
+                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+                <div class="containerElemento">
+                    <p class="primary p-no-margin">Placeholder</p>
+                </div>
+            </a>
+            <a href="" class="elemento">
+                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+                <div class="containerElemento">
+                    <p class="primary p-no-margin">Placeholder</p>
+                </div>
+            </a>
+            <a href="" class="elemento">
+                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+                <div class="containerElemento">
+                    <p class="primary p-no-margin">Placeholder</p>
+                </div>
+            </a>
         </div>
-        
+        <div class="section-title">
+            <h2 class="">Siguenos en redes sociales</h2>
+        </div>
+        <div class="seccion-contenido">
+            <a class="containerRSS"><img class="img-rss" src="assets/images/twitter.svg" alt="Twitter"></a>
+            <a class="containerRSS"><img class="img-rss" src="assets/images/instagram.svg" alt="Instagram"></a>
+            <a class="containerRSS"><img class="img-rss" src="assets/images/youtube.svg" alt="Youtube"></a>
+        </div>
     </section>
+
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -54,3 +77,4 @@
     </script>
 
 </body>
+</html>

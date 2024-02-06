@@ -19,7 +19,10 @@
     --color4: #00CC08;
     --color5: #66CA6A;
 }
-
+a {
+    text-decoration: none;
+  }
+  
 body { /*Actua sobre el body definiendo el mismo*/
     margin: auto;
     margin-top: 120px; 
