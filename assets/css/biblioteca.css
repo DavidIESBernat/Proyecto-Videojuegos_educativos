@@ -1,32 +1,42 @@
-.container-fluid {
-    margin: 10px 0;
-}
-/* Juegos */
-.tarjeta-juego {
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 0 10px;
-    border-radius: 5px;
-}
-.imagen-videojuego {
-    width: 100%;
-}
-.nombre-videojuego {
-    font-size: 20px;
-    font-family: 'Barlow';
-    font-weight: 900;
+.tarjeta {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     text-align: center;
+    min-height: 390px;
 }
-.descripcion-videojuego {
+
+.tarjeta img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: #666;
     font-size: 14px;
-    font-family: 'Goodhome', sans-serif;
+    margin-bottom: 15px;
 }
-.btn-videojuego {
-    text-decoration: none;
-    background-color: #00A3FF;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+
+.boton-jugar {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.btn-videojuego:hover {
-    background-color: #4DBFFF;
+
+.boton-jugar:hover {
+    background-color: #0056b3;
 }

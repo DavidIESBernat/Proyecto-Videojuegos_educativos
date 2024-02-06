@@ -19,16 +19,16 @@
                 <div class="logoContainer">
                     <img class="logoImagen" src="assets/images/LogoProvisional.svg" alt="Imagen del logotipo de Aprende jugando"></img>
                 </div>
-                <a class="navbar-brand tituloHeader" href="#">Aprende Jugando</a>
+                <a class="navbar-brand tituloHeader" href="?controlador=principal">Aprende Jugando</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav-final" id="navbarNavAltMarkup">
                 <div class="navbar-nav marginNav">
-                    <a class="nav-link botonHeader" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link botonHeader" aria-current="page" href="?controlador=principal">Inicio</a>
                     <a class="nav-link botonHeader" href="?controlador=biblioteca">Juegos</a>
-                    <a class="nav-link botonHeader ultimoBoton" href="#">Login</a>
+                    <a class="nav-link botonHeader ultimoBoton" href="?controlador=cliente">Login</a>
                 </div>
             </div>
         </div>

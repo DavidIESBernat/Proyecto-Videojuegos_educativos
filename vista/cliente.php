@@ -6,29 +6,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
     <link href="assets/css/header.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="assets/css/biblioteca.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="assets/css/cliente.css" rel="stylesheet" type="text/css" media="screen">
     <title>Biblioteca</title>
 </head>
 <body class="cuerpo">
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
-                <?php
-                    foreach ($videojuegos as $videojuego) {
-                ?>
-        
-                <div class="col-sm-12 col-md-6 col-lg-3 columna">
-                    <div class="tarjeta">
-                        <img src="<?= $videojuego->getImg() ?>" alt="Imagen del juego">
-                        <h2><?= $videojuego->getNombre() ?></h2>
-                        <p><?= $videojuego->getDescripcion() ?></p>
-                        <button class="boton-jugar">Jugar</button>
-                    </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 columna">
+                    
                 </div>
-        
-                <?php
-                    }
-                ?>
             </div>
         </div>
     </div>

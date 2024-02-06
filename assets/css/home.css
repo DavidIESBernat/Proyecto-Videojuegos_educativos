@@ -1,0 +1,26 @@
+.mainContainer {
+    max-width: 1080px;
+    margin: auto;
+    }
+    
+    .carousel-item {
+        max-height: 500px;
+    }
+    
+    .sr-only {
+        color: var();
+    }
+    
+    .seccion-contenido {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--colorPrimario);
+    }
+    
+    .elemento {
+        min-height: 250px;
+        min-width: 250px;
+        background-color: var(--color1);
+        border-radius: 10%;
+        margin: 50px;
+    }
