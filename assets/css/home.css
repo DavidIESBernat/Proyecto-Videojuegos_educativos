@@ -30,7 +30,7 @@ margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #1E1E1E80;
     border-radius: 0 0 25px 25px;
     margin-top: -50px;
     height: 50px;
@@ -38,7 +38,7 @@ margin: auto;
 }
 
 .elemento:hover .containerElemento {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: var(--color1);
 }
 
 .containerImagen {
@@ -54,13 +54,13 @@ margin: auto;
     height: 250px;
     width: 250px;
     margin: 50px;
-    border: 5px solid var(--colorSecundario);
+    border: 5px solid var(--color1);
     border-radius: 50%;
     cursor: pointer;
   }
 
   .containerRSS:hover { /*Hover de dichas secciones*/
-    border: 10px solid var(--colorSecundario);
+    border: 10px solid var(--color1);
   }
   .img-rss { /*Iconos de las redes sociales*/
     margin: auto;

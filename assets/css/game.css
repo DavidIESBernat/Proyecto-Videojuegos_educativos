@@ -1,0 +1,75 @@
+.containerGame {
+    max-width: 1080px;
+    background-color: var(--colorPrimario);
+    margin: auto;
+}
+
+.containerGameContent {
+    display: flex;
+    max-width: 1080px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.containerGameTop {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-left: 120px;
+}
+
+.flecha {
+    font-weight: 900;
+}
+
+.containerTitle {
+    margin-top: 25px;
+}
+
+.containerDescription {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 50px;
+}
+
+.containerBtn {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: start;
+}
+
+.btnGame {
+    height: 50px;
+    width: 200px;
+    margin-right: 25px;
+    border-radius: 10px;
+    border: 2px solid var(--color1);
+}
+
+.containerGameIzquierdo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.containerGameDerecho {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.elemento {
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.containerImagen {
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 25px 25px;
+}

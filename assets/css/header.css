@@ -1,6 +1,6 @@
 .headerContainer {
     height: 120px;
-    background-color: var(--colorPrimario);
+    background-color: var(--color2);
     display: flex;
     justify-content: center;
 }
@@ -22,14 +22,14 @@
 
 .tituloHeader {
     margin-left: 25px;
-    color: var(--color2);
+    color: var(--colorPrimario);
     font-weight: 600;
     font-size: 40px;
 
 }
 
 .tituloHeader:hover, .tituloHeader:active {
-    color: var(--color2);
+    color: var(--color1);
 }
 
 .nav-final {
@@ -38,7 +38,7 @@
 }
 
 .botonHeader{
-    color: var(--color2);
+    color: var(--colorPrimario);
     font-size: 20px;
 
 }

@@ -34,6 +34,11 @@ body { /*Actua sobre el body definiendo el mismo*/
     flex-direction: row;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .flex-end {
     display: flex;
     justify-content: end;

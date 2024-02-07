@@ -18,5 +18,16 @@ class principalControlador {
         // Footer
         include_once 'vista/footer.php';
     }
+
+    public function game() {
+       // Header
+       include_once 'vista/header.php';
+
+       // Main
+       include_once 'vista/game.php';
+
+       // Footer
+       include_once 'vista/footer.php';
+    }
 }
 ?>
