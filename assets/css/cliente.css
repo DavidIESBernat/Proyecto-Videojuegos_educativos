@@ -1,0 +1,34 @@
+body {
+    background-color: #f8f9fa !important;
+}
+.mainContainer {
+    margin: 150px 0;
+}
+.tabs {
+    width: 100%; /* Ancho fijo para las pestañas */
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre las pestañas */
+    padding: 0;
+    margin: 0;
+    background-color: #f8f9fa; /* Color de fondo de las pestañas */
+    list-style-type: none;
+}
+.tabs li {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #dee2e6;
+    border: none;
+}
+.tabs li.active-tab {
+    background-color: transparent;
+    border-bottom: 2px solid #007bff; /* Resalta la pestaña activa */
+}
+.tabs li:hover {
+    background-color: #e0e0e0;
+}
+.tab-content {
+    width: 100%; /* Ancho del 100% para el contenido debajo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

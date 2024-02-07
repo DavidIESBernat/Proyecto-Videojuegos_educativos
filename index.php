@@ -6,6 +6,7 @@ include_once 'controlador/principalControlador.php';
 include_once 'controlador/bibliotecaControlador.php';
 include_once 'controlador/clienteControlador.php';
 include_once 'modelo/VideojuegoDAO.php';
+include_once 'modelo/UsuarioDAO.php';
 
 if(!isset($_GET['controlador'])) {
     // Si la url no contiene un controlador se redirigira automaticamente al controlador principal
