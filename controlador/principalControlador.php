@@ -29,5 +29,18 @@ class principalControlador {
        // Footer
        include_once 'vista/footer.php';
     }
+
+    public function biblioteca() {
+        $videojuegos = VideojuegoDAO::getAllVideojuegos();
+
+        // Header
+       include_once 'vista/header.php';
+
+       // Main
+       include_once 'vista/biblioteca.php';
+
+       // Footer
+       include_once 'vista/footer.php';
+    }
 }
 ?>

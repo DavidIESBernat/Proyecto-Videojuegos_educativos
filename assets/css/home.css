@@ -24,6 +24,10 @@ margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    border-radius: 25px 25px;
+    border: 0px;
+    position: relative;
+    overflow: hidden;
 }
 
 .containerElemento{
@@ -35,17 +39,16 @@ margin: auto;
     margin-top: -50px;
     height: 50px;
     font-weight: 600;
-}
-
-.elemento:hover .containerElemento {
-    background-color: var(--color1);
+    overflow: hidden;
+    position: relative;
 }
 
 .containerImagen {
     height: 100%;
     background-size: cover;
-    object-fit: cover;
+    background-repeat: no-repeat;
     border-radius: 25px 25px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .containerRSS { /*Secciones circulares de las redes sociales*/
@@ -66,4 +69,14 @@ margin: auto;
     margin: auto;
     width: 150px;
     height: 150px;
+  }
+
+  .elemento:hover .containerElemento {
+    background-color: var(--color1);
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+}
+  .elemento:hover .containerImagen { /*Hover que amplia la imagen del articulo*/
+    transform: scale(1.1);
+    object-fit: cover;
   }

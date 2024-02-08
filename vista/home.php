@@ -10,8 +10,8 @@
 
 </head>
 <body>
-    <section class="mainContainer">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <section class="mainContainer row no-margin-row">
+        <div id="carouselExampleIndicators" class="carousel slide col-12" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="d-block w-100" src="assets/images/mathland.svg" alt="First slide">
@@ -33,36 +33,36 @@
                 
             </a>
         </div>
-        <div class="section-title">
+        <div class="section-title col-12">
             <h2 class="">Juegos destacados</h2>
         </div>
-        <div class="seccion-contenido">
-            <a href="" class="elemento">
-                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+        <div class="seccion-contenido col-12 row no-margin-row">
+            <a href="" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/placeholder.jpg)"></div>
                 <div class="containerElemento">
                     <p class="primary p-no-margin">Placeholder</p>
                 </div>
             </a>
-            <a href="" class="elemento">
-                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+            <a href="" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/oncity.jpg)"></div>
                 <div class="containerElemento">
                     <p class="primary p-no-margin">Placeholder</p>
                 </div>
             </a>
-            <a href="" class="elemento">
+            <a href="" class="elemento col-4">
                 <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
                 <div class="containerElemento">
                     <p class="primary p-no-margin">Placeholder</p>
                 </div>
             </a>
         </div>
-        <div class="section-title">
+        <div class="section-title col-12">
             <h2 class="">Siguenos en redes sociales</h2>
         </div>
-        <div class="seccion-contenido">
-            <a class="containerRSS"><img class="img-rss" src="assets/images/twitter.svg" alt="Twitter"></a>
-            <a class="containerRSS"><img class="img-rss" src="assets/images/instagram.svg" alt="Instagram"></a>
-            <a class="containerRSS"><img class="img-rss" src="assets/images/youtube.svg" alt="Youtube"></a>
+        <div class="seccion-contenido col-12 row no-margin-row">
+            <a class="containerRSS col-4"><img class="img-rss" src="assets/images/twitter.svg" alt="Twitter"></a>
+            <a class="containerRSS col-4"><img class="img-rss" src="assets/images/instagram.svg" alt="Instagram"></a>
+            <a class="containerRSS col-4"><img class="img-rss" src="assets/images/youtube.svg" alt="Youtube"></a>
         </div>
     </section>
 

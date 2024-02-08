@@ -71,6 +71,10 @@ font-weight: 600;
     margin-bottom: 0;
 }
 
+.no-margin-row {
+    --bs-gutter-x: 0rem;
+}
+
 /*Seccion de Titulo*/
 .section-title {
     margin: auto;
@@ -81,3 +85,4 @@ font-weight: 600;
     justify-content: center;
     align-items: center;
 }
+
