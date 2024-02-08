@@ -6,15 +6,15 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="assets/css/header.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../assets/css/formularios.css" rel="stylesheet" type="text/css" media="screen">
-    <title>Registro</title>
+    <link href="assets/css/formularios.css" rel="stylesheet" type="text/css" media="screen">
+    <title>Inicio de Sesión</title>
 </head>
 <body class="cuerpo">
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-12 col-lg-12 columna">
-                    <h1>Crear cuenta</h1>
+                    <h1>Iniciar sesión</h1>
                     <form>
                         <label>Correo</label>
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
@@ -22,21 +22,9 @@
                         <label>Contraseña</label>
                         <input type="password" name="contraseña" placeholder="Contraseña1234">
 
-                        <label>Confirmar contraseña</label>
-                        <input type="password" name="contraseña" placeholder="Contraseña1234">
-
-                        <label>Nombre</label>
-                        <input type="password" name="contraseña" placeholder="Juan">
-
-                        <label>Apellido</label>
-                        <input type="password" name="contraseña" placeholder="García">
-                        
-                        <label>Edad</label>
-                        <input type="password" name="contraseña" placeholder="18">
-
                         <div class="boton-y-enlace">
-                            <input type="submit" value="Crear cuenta">
-                            <p>¿Ya tienes una cuenta? <a href="inicioSesion.html">Inicia sesión</a></p>
+                            <input type="submit" value="Iniciar sesión">
+                            <p>¿No tienes una cuenta? <a href="?controlador=cliente&accion=registro">Crear una cuenta</a></p>
                         </div>
                     </form>
                 </div>

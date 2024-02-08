@@ -1,34 +1,31 @@
-body {
-    background-color: #f8f9fa !important;
+.cuerpo {
+    margin: 50px 0;
 }
-.mainContainer {
-    margin: 150px 0;
-}
-.tabs {
-    width: 100%; /* Ancho fijo para las pestañas */
-    display: flex;
-    justify-content: space-between; /* Distribuye el espacio entre las pestañas */
+ul {
     padding: 0;
-    margin: 0;
-    background-color: #f8f9fa; /* Color de fondo de las pestañas */
-    list-style-type: none;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0 0 10px;
 }
-.tabs li {
-    cursor: pointer;
-    padding: 10px 20px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    background-color: #dee2e6;
-    border: none;
+li {
+    list-style: none;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px 0 0 10px;
 }
-.tabs li.active-tab {
-    background-color: transparent;
-    border-bottom: 2px solid #007bff; /* Resalta la pestaña activa */
+a {
+    text-decoration: none;
+    color: black;
+
 }
-.tabs li:hover {
-    background-color: #e0e0e0;
+.active {
+    border-right: solid 2px #00A3FF;
+    background-color: white;
+    color: #00A3FF;
 }
-.tab-content {
-    width: 100%; /* Ancho del 100% para el contenido debajo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.columnas {
+    padding: 0;
+}   
+.principal {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 10px 10px 10px;
+    padding: 10px;
 }

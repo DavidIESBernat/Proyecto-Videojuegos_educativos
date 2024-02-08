@@ -26,9 +26,9 @@
             </button>
             <div class="collapse navbar-collapse nav-final" id="navbarNavAltMarkup">
                 <div class="navbar-nav marginNav">
-                    <a class="nav-link botonHeader font600" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link botonHeader font600" href="#">Juegos</a>
-                    <a class="nav-link botonHeader ultimoBoton font600"  href="#">Iniciar Sesión</a>
+                    <a class="nav-link botonHeader font600" aria-current="page" href="?controlador=principal">Inicio</a>
+                    <a class="nav-link botonHeader font600" href="?controlador=biblioteca">Juegos</a>
+                    <a class="nav-link botonHeader ultimoBoton font600"  href="?controlador=cliente&accion=iniciarSesion">Iniciar Sesión</a>
                 </div>
             </div>
         </div>

@@ -11,29 +11,20 @@
     <title>Biblioteca</title>
 </head>
 <body class="cuerpo">
-    <a href="" class="elemento">
-        <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
-        <div class="containerElemento">
-            <p class="primary p-no-margin">Placeholder</p>
-        </div>
-    </a>
-
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
                 <?php
                     foreach ($videojuegos as $videojuego) {
                 ?>
-        
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                    <div class="tarjeta">
-                        <img src="<?= $videojuego->getImg() ?>" alt="Imagen del juego">
-                        <h2><?= $videojuego->getNombre() ?></h2>
-                        <p><?= $videojuego->getDescripcion() ?></p>
-                        <button class="boton-jugar">Jugar</button>
-                    </div>
+                    <a href="" class="elemento">
+                        <div class="containerImagen" style="background-image: url(assets/images/<?=$videojuego->getImg()?>)"></div>
+                        <div class="containerElemento">
+                            <p class="primary p-no-margin"><?= $videojuego->getNombre() ?></p>
+                        </div>
+                    </a>
                 </div>
-        
                 <?php
                     }
                 ?>
