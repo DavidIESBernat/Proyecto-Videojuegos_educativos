@@ -11,4 +11,6 @@
 <body>
 <p>Home</p>
 
+
+<img src="../assets/images/aprende-jugando.png" width="100px" height="100px">
 </body>
