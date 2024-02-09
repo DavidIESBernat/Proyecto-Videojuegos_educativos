@@ -12,6 +12,36 @@
 </head>
 <body class="cuerpo">
     <div class="container-fluid">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Filtrar</button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Filtrar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="opcion-filtro">
+                    <input type="checkbox">
+                    <p>Juegos de historia</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input type="checkbox">
+                    <p>Juegos Matematicos</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input type="checkbox">
+                    <p>Juegos de Historia</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input type="checkbox">
+                    <p>Juegos de Ciencia</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input type="checkbox">
+                    <p>Juegos de Idiomas</p>
+                </div>
+            </div>
+        </div>  
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
                 <?php
