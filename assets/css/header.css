@@ -1,0 +1,61 @@
+.headerContainer {
+    height: 120px;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+}
+
+.logoContainer {
+    height: 100px;
+    width: 100px;
+}
+.logoImagen {
+    position: relative;
+    bottom: 17px;
+    width: 135px;
+    right: 85px;
+}
+
+.headerContainerIzquierdo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tituloHeader {
+    margin-left: 25px;
+    color: var(--colorPrimario);
+    font-weight: 600;
+    font-size: 40px;
+
+}
+
+.tituloHeader:hover, .tituloHeader:active {
+    color: var(--color1);
+}
+
+.nav-final {
+    display: flex;
+    justify-content: end;
+}
+
+.botonHeader{
+    color: var(--colorPrimario);
+    font-size: 20px;
+
+}
+
+.botonHeader:hover, .botonHeader.active {
+    color: var(--color1);
+}
+
+.ultimoBoton {
+    border-right: 0px;
+}
+
+.navContainer {
+    max-width: 1080px;
+    display: flex;
+    align-items: center;
+}

@@ -10,6 +10,78 @@
 
 :root { /*Variables de la hoja de estilo actual*/
     /* Colores definidos */
-    --color1: #000;
-    --color2: #FFF;
+    --colorFondo: #F1F1F1;
+    --colorPrimario: #FFFFFF;
+    --colorSecundario: #000000;
+    --color1: #1E1E1E;
+    --color2: #00A3FF;
+    --color3: #4DBFFF;
+    --color4: #00CC08;
+    --color5: #66CA6A;
+}
+a {
+    text-decoration: none;
+  }
+  
+body { /*Actua sobre el body definiendo el mismo*/
+    margin: auto;
+    margin-top: 120px; 
+    background-color: var(--colorFondo);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: end;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.font600 {
+font-weight: 600;
+}
+
+.primary {
+    color: var(--colorPrimario);
+}
+
+.secondary {
+    color: var(--colorSecundario);
+}
+
+.p-no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.no-margin-row {
+    --bs-gutter-x: 0rem;
+}
+
+/*Seccion de Titulo*/
+.section-title {
+    margin: auto;
+    height: 120px;
+    background-color: var(--color5);
+    color: var(--colorPrimario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
