@@ -36,7 +36,7 @@
 
                         <div class="boton-y-enlace">
                             <input type="submit" value="Crear cuenta">
-                            <p>¿Ya tienes una cuenta? <a href="?controlador=cliente&accion=iniciarSesion">Inicia sesión</a></p>
+                            <p>¿Ya tienes una cuenta? <a href="?controlador=usuario&accion=paginaIniciarSesion">Inicia sesión</a></p>
                         </div>
                     </form>
                 </div>

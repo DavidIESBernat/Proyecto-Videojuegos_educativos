@@ -1,5 +1,5 @@
 <?php
-    include_once 'Usuario.php';
+    include_once 'modelo/Usuario.php';
 
     class UsuarioDAO {
         public static function getAllUsuarios() {
@@ -13,6 +13,19 @@
                 }
                 return $usuarios;
             }
+        }
+
+        public static function iniciarSesion($correo, $contraseña) {
+            $con = dataBase::connect();
+
+            $result = $con->query("SELECT rol FROM usuarios WHERE correo = '$correo' AND contraseña = '$contraseña' LIMIT 1;");
+            $row = $result->fetch_assoc();
+            $_SESSION['rolUsuario'] = $row['rol'];
+
+            $result = $con->query("SELECT * FROM usuarios WHERE correo = '$correo' AND contraseña = '$contraseña' LIMIT 1;");
+            $usuario = $result->fetch_object('Usuario');
+
+            $_SESSION['Usuario'] = $usuario;
         }
     }
 ?>

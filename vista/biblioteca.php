@@ -20,48 +20,40 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
+                <button id="btnFiltrar">Filtrar</button>
+                <button id="btnMostrarTodos">Mostrar Todos</button>
+
                 <div class="opcion-filtro">
-                    <input type="checkbox">
+                    <input class="checkbox" type="checkbox">
                     <p>Juegos de historia</p>
                 </div>
                 <div class="opcion-filtro">
-                    <input type="checkbox">
+                    <input class="checkbox" type="checkbox">
                     <p>Juegos Matematicos</p>
                 </div>
                 <div class="opcion-filtro">
-                    <input type="checkbox">
+                    <input class="checkbox" type="checkbox">
                     <p>Juegos de Historia</p>
                 </div>
                 <div class="opcion-filtro">
-                    <input type="checkbox">
+                    <input class="checkbox" type="checkbox">
                     <p>Juegos de Ciencia</p>
                 </div>
                 <div class="opcion-filtro">
-                    <input type="checkbox">
+                    <input class="checkbox" type="checkbox">
                     <p>Juegos de Idiomas</p>
                 </div>
             </div>
-        </div>  
+        </div>
+
         <div class="d-flex justify-content-center">
-            <div class="row justify-content-center">
-                <?php
-                    foreach ($videojuegos as $videojuego) {
-                ?>
-                <div class="col-sm-12 col-md-6 col-lg-3">
-                    <a href="" class="elemento">
-                        <div class="containerImagen" style="background-image: url(assets/images/<?=$videojuego->getImg()?>)"></div>
-                        <div class="containerElemento">
-                            <p class="primary p-no-margin"><?= $videojuego->getNombre() ?></p>
-                        </div>
-                    </a>
-                </div>
-                <?php
-                    }
-                ?>
+            <div class="row justify-content-center" id="div_videojuegos">
+
             </div>
         </div>
     </div>
     
+    <script src="src/biblioteca.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

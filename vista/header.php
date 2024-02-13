@@ -28,7 +28,17 @@
                 <div class="navbar-nav marginNav">
                     <a class="nav-link botonHeader font600" aria-current="page" href="?controlador=principal">Inicio</a>
                     <a class="nav-link botonHeader font600" href="?controlador=biblioteca">Juegos</a>
-                    <a class="nav-link botonHeader ultimoBoton font600"  href="?controlador=cliente&accion=iniciarSesion">Iniciar Sesión</a>
+                    <?php
+                        if (isset($_SESSION['Usuario'])) {
+                    ?>
+                    <a class="nav-link botonHeader ultimoBoton font600"  href="?controlador=usuario">Mi cuenta</a>
+                    <?php
+                        } else {
+                    ?>
+                    <a class="nav-link botonHeader ultimoBoton font600"  href="?controlador=usuario&accion=paginaIniciarSesion">Iniciar Sesión</a>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>

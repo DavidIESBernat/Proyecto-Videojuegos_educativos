@@ -15,7 +15,7 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-12 col-lg-12 columna">
                     <h1>Iniciar sesión</h1>
-                    <form>
+                    <form action="?controlador=usuario&accion=iniciarSesion" method="post">
                         <label>Correo</label>
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
 
@@ -24,7 +24,7 @@
 
                         <div class="boton-y-enlace">
                             <input type="submit" value="Iniciar sesión">
-                            <p>¿No tienes una cuenta? <a href="?controlador=cliente&accion=registro">Crear una cuenta</a></p>
+                            <p>¿No tienes una cuenta? <a href="?controlador=usuario&accion=paginaRegistro">Crear una cuenta</a></p>
                         </div>
                     </form>
                 </div>
