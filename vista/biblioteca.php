@@ -43,6 +43,46 @@
                     <input class="checkbox" type="checkbox">
                     <p>Juegos de Idiomas</p>
                 </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Habilidades Cognitivas</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Habilidades Sociales</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Habilidades Artísticas</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Geografía</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Ciencias sociales</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Programación y Lógica</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Salud y Bienestar</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Ecología</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Literatura y Escritura</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Educación Financiera</p>
+                </div>
             </div>
         </div>
 

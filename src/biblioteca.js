@@ -3,7 +3,7 @@ fetch(`http://localhost/Proyecto-Videojuegos_educativos/?controlador=api&accion=
     .then(videojuegos => {
         let div_videojuegos = document.getElementById("div_videojuegos");
         let videojuegosOriginal = videojuegos;
-        let checkboxes = document.querySelectorAll(".checkbox"); // Corregido aquí
+        let checkboxes = document.querySelectorAll(".checkbox");
         let btnFiltrar = document.getElementById("btnFiltrar");
         let btnMostrarTodos = document.getElementById("btnMostrarTodos");
         let categorias = obtenerCategorias(videojuegos);
@@ -13,9 +13,9 @@ fetch(`http://localhost/Proyecto-Videojuegos_educativos/?controlador=api&accion=
             let arrayCategorias = Array.from(checkboxes).map(checkbox => checkbox.checked);
 
             if (arrayCategorias.includes(true)) {
-                videojuegos = videojuegos.filter(videojuego => { // Corregido aquí
-                    let categoriasPosicion = buscarCategoria(categorias);
-                    return arrayCategorias[categoriasPosicion[videojuego.categoria_id]];
+                let categoriaPosicion = buscarCategoria(categorias);
+                videojuegos = videojuegos.filter(videojuego => {
+                    return arrayCategorias[categoriaPosicion[videojuego.categoria_id]];
                 });
                 mostrarVideojuegos(videojuegos, div_videojuegos);
             } else {
@@ -40,14 +40,21 @@ fetch(`http://localhost/Proyecto-Videojuegos_educativos/?controlador=api&accion=
             videojuegos.forEach(videojuego => {
                 let div = document.createElement("div");
                 div.classList.add("col-sm-12", "col-md-6", "col-lg-3");
-                div.innerHTML = `
-                <a href="" class="elemento">
-                <div class="containerImagen" style="background-image: url(assets/images/${videojuego.img})"></div>
-                    <div class="containerElemento">
-                        <p class="primary p-no-margin">${videojuego.nombre}</p>
-                    </div>
-                </a>
-            `;
+                let a = document.createElement("a");
+                a.classList.add("elemento");
+                a.href = "";
+                let containerImagen = document.createElement("div");
+                containerImagen.classList.add("containerImagen");
+                containerImagen.style.backgroundImage = `url(assets/images/${videojuego.img})`;
+                let containerElemento = document.createElement("div");
+                containerElemento.classList.add("containerElemento");
+                let p = document.createElement("p");
+                p.classList.add("primary", "p-no-margin");
+                p.textContent = videojuego.nombre;
+                containerElemento.appendChild(p);
+                a.appendChild(containerImagen);
+                a.appendChild(containerElemento);
+                div.appendChild(a);
                 row.appendChild(div);
             })
             div_videojuegos.appendChild(row);

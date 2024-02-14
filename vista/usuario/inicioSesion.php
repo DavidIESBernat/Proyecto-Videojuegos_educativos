@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="assets/css/header.css" rel="stylesheet" type="text/css" media="screen">
     <link href="assets/css/formularios.css" rel="stylesheet" type="text/css" media="screen">
     <title>Inicio de Sesión</title>
 </head>
-<body class="cuerpo">
+<body>
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-12 col-lg-12 columna">
-                    <h1>Iniciar sesión</h1>
                     <form action="?controlador=usuario&accion=iniciarSesion" method="post">
                         <label>Correo</label>
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
