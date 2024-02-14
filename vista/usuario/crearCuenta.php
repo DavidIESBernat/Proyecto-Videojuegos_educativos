@@ -15,7 +15,7 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-12 col-lg-12 columna">
                     <h1>Crear cuenta</h1>
-                    <form>
+                    <form action="?controlador=usuario&accion=crearUsuario" method="post">
                         <label>Correo</label>
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
 
@@ -23,16 +23,16 @@
                         <input type="password" name="contraseña" placeholder="Contraseña1234">
 
                         <label>Confirmar contraseña</label>
-                        <input type="password" name="contraseña" placeholder="Contraseña1234">
+                        <input type="password" name="confirmar_contraseña" placeholder="Contraseña1234">
 
                         <label>Nombre</label>
-                        <input type="password" name="contraseña" placeholder="Juan">
+                        <input type="text" name="nombre" placeholder="Juan">
 
                         <label>Apellido</label>
-                        <input type="password" name="contraseña" placeholder="García">
+                        <input type="text" name="apellido" placeholder="García">
                         
-                        <label>Edad</label>
-                        <input type="password" name="contraseña" placeholder="18">
+                        <label>Fecha nacimiento</label>
+                        <input type="date" name="fecha_nacimiento" placeholder="18">
 
                         <div class="boton-y-enlace">
                             <input type="submit" value="Crear cuenta">

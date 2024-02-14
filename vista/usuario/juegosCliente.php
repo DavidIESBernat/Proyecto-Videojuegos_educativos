@@ -13,6 +13,7 @@
 <body>
     <?php
         foreach($usuarios as $usuario) {
+            if ($usuario->getId_usuario() == $id_usuario) {
     ?>
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
@@ -21,8 +22,8 @@
                     <ul>
                         <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li class="active">Biblioteca</li></a>
-                        <a href="?controlador=usuario&accion=modificarDatos"><li>Mis datos</li></a>
-                        <a href="#"><li>Cerrar sesión</li></a>
+                        <a href="?controlador=usuario&accion=modificarDatos"><li>Modificar datos</li></a>
+                        <a href="controlador/cerrarSesion.php"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-8 columnas principal">
@@ -36,6 +37,7 @@
         </div>
     </div>
     <?php
+            }
         }
     ?>
    

@@ -22,7 +22,7 @@
                     <ul>
                         <a href="?controlador=usuario"><li class="active">Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
-                        <a href="?controlador=usuario&accion=modificarDatos"><li>Mis datos</li></a>
+                        <a href="?controlador=usuario&accion=modificarDatos"><li>Modificar datos</li></a>
                         <a href="controlador/cerrarSesion.php"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>

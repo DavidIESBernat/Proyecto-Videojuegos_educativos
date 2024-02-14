@@ -27,5 +27,15 @@
 
             $_SESSION['Usuario'] = $usuario;
         }
+
+        public static function crearUsuario($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento) {
+            $con = dataBase::connect();
+            
+            if ($contraseña == $confirmar_contraseña) {
+                $con->query("INSERT INTO `usuarios`(`nombre`, `apellido`, `fecha_nacimiento`, `correo`, `contraseña`, `rol`) VALUES ('$nombre','$apellido','$fecha_nacimiento','$correo','$contraseña', 'Cliente')");
+            } else {
+                header('Location:'.url.'?controlador=usuario&accion=paginaRegistro');
+            }
+        }
     }
 ?>

@@ -49,6 +49,22 @@
             }
         }
 
+        public static function crearUsuario() {
+            if (isset($_POST['correo'], $_POST['contraseña'], $_POST['confirmar_contraseña'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
+                $correo = $_POST['correo']; 
+                $contraseña = $_POST['contraseña'];
+                $confirmar_contraseña = $_POST['confirmar_contraseña']; 
+                $nombre = $_POST['nombre'];
+                $apellido = $_POST['apellido'];
+                $fecha_nacimiento = $_POST['fecha_nacimiento'];
+
+                UsuarioDAO::crearUsuario($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento);
+                header('Location:'.url.'?controlador=usuario&accion=paginaIniciarSesion');
+            } else {
+                header('Location:'.url.'?controlador=usuario&accion=paginaRegistro');
+            }
+        }
+
         // Viajar entre las páginas de mi cuenta
         public static function bibliotecaJuegos() {
             
@@ -56,6 +72,7 @@
                 include_once 'vista/home.php';
             } else {
                 $usuarios = UsuarioDAO::getAllUsuarios();
+                $id_usuario = $_SESSION['Usuario']->getId_usuario();
 
                 include_once 'vista/header.php';
                 include_once 'vista/usuario/juegosCliente.php';
@@ -69,6 +86,7 @@
                 include_once 'vista/home.php';
             } else {
                 $usuarios = UsuarioDAO::getAllUsuarios();
+                $id_usuario = $_SESSION['Usuario']->getId_usuario();
 
                 include_once 'vista/header.php';
                 include_once 'vista/usuario/modificarDatosCliente.php';
