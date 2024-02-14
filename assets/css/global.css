@@ -82,7 +82,7 @@ font-weight: 600;
     margin: auto;
     height: 120px;
     background-color: var(--color5);
-    color: var(--colorPrimario);
+    color: var(--colorPrimario) !important;
     display: flex;
     justify-content: center;
     align-items: center;

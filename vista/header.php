@@ -7,8 +7,8 @@
     
     <link rel="icon" type="image/ico" href="assets/images/favicon.ico"/> <!-- Favicon -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/header.css" rel="stylesheet" type="text/css" media="screen">
     <link href="assets/css/global.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="assets/css/header.css" rel="stylesheet" type="text/css" media="screen">
     
 </head>
 <body>
@@ -27,8 +27,8 @@
             <div class="collapse navbar-collapse nav-final" id="navbarNavAltMarkup">
                 <div class="navbar-nav marginNav">
                     <a class="nav-link botonHeader font600" aria-current="page" href="<?=url?>?controlador=principal">Inicio</a>
-                    <a class="nav-link botonHeader font600" href="<?=url?>?controlador=juegos">Juegos</a>
-                    <a class="nav-link botonHeader ultimoBoton font600"  href="<?=url?>?controlador=usuario&accion=login">Iniciar Sesión</a>
+                    <a class="nav-link botonHeader font600" href="<?=url?>?controlador=biblioteca">Juegos</a>
+                    <a class="nav-link botonHeader ultimoBoton font600"  href="<?=url?>?controlador=usuario&accion=paginaIniciarSesion">Iniciar Sesión</a>
                 </div>
             </div>
         </div>
