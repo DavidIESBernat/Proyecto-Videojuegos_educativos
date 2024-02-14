@@ -56,13 +56,36 @@
                 </div>
             </a>
         </div>
-        <div class="section-title col-12">
+        <!--<div class="section-title col-12">
             <h2 class="">Siguenos en redes sociales</h2>
         </div>
         <div class="seccion-contenido col-12 row no-margin-row">
             <a class="containerRSS col-4"><img class="img-rss" src="assets/images/twitter.svg" alt="Twitter"></a>
             <a class="containerRSS col-4"><img class="img-rss" src="assets/images/instagram.svg" alt="Instagram"></a>
             <a class="containerRSS col-4"><img class="img-rss" src="assets/images/youtube.svg" alt="Youtube"></a>
+        </div>-->
+        <div class="section-title col-12">
+            <h2 class="">Juegos añadidos recientemente</h2>
+        </div>
+        <div class="seccion-contenido col-12 row no-margin-row">
+            <a href="" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+                <div class="containerElemento">
+                    <p class="primary p-no-margin">Placeholder</p>
+                </div>
+            </a>
+            <a href="" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+                <div class="containerElemento">
+                    <p class="primary p-no-margin">Placeholder</p>
+                </div>
+            </a>
+            <a href="" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+                <div class="containerElemento">
+                    <p class="primary p-no-margin">Placeholder</p>
+                </div>
+            </a>
         </div>
     </section>
 

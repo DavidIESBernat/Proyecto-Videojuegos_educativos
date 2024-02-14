@@ -12,7 +12,7 @@
         <div class="containerGameTop">
             <a href="" class="btnVolver"><span class="flecha"><</span> Volver</a>
         </div>
-        <div class="containerGameBottom">
+        <div class="containerGameBottom ">
             <div class="containerGameContent">
                 <div class="containerGameIzquierdo ">
                     <div class="elemento">
@@ -28,10 +28,11 @@
                         <p class="descripcion p-no-margin">Descripcion: <span>Ebis vendae eaqui solupta turera prepe parum ut estrum, cus as nient aut aut pa nost, consed ut reroribus ex ea dolor as secestrum qui con preprae sequam ipsaeperum is ipsamus aectibustior accae perovit quas as modipsunt ut volorro beatemolenis veremporum quianda perchil es quam eum</span></p>
                     </div>
                     <div class="containerBtn flex-row">
-                            <button class="btnGame">Jugar</button>
-                            <button class="btnGame">Descargar</button>
+                        <button class="btnGame">Jugar</button>
+                        <button class="btnGame">Descargar</button>
                     </div> 
                 </div>
+                
             </div>
         </div>
     </div>

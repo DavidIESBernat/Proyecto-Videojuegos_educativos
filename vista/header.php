@@ -17,18 +17,18 @@
         <div class="container-fluid navContainer">
             <div class="headerContainerIzquierdo">
                 <div class="logoContainer">
-                    <img class="logoImagen" src="assets/images/LogoProvisional.svg" alt="Imagen del logotipo de Aprende jugando"></img>
+                    <img class="logoImagen" src="assets/images/bombillaConFondo.svg" alt="Imagen del logotipo de Aprende jugando"></img>
                 </div>
-                <a class="navbar-brand tituloHeader" href="#">Aprende Jugando</a>
+                <a class="navbar-brand tituloHeader" href="<?=url?>?controlador=principal">Aprende Jugando</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav-final" id="navbarNavAltMarkup">
                 <div class="navbar-nav marginNav">
-                    <a class="nav-link botonHeader font600" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link botonHeader font600" href="#">Juegos</a>
-                    <a class="nav-link botonHeader ultimoBoton font600"  href="#">Iniciar Sesión</a>
+                    <a class="nav-link botonHeader font600" aria-current="page" href="<?=url?>?controlador=principal">Inicio</a>
+                    <a class="nav-link botonHeader font600" href="<?=url?>?controlador=juegos">Juegos</a>
+                    <a class="nav-link botonHeader ultimoBoton font600"  href="<?=url?>?controlador=usuario&accion=login">Iniciar Sesión</a>
                 </div>
             </div>
         </div>

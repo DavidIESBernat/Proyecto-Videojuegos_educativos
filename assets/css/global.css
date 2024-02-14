@@ -26,7 +26,9 @@ a {
 body { /*Actua sobre el body definiendo el mismo*/
     margin: auto;
     margin-top: 120px; 
-    background-color: var(--colorFondo);
+    background-image: url('../images/fondo_dibujos2.jpg');
+    background-repeat: repeat;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .flex-row {
