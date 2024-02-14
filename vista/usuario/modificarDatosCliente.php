@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
-                <div class="col-sm-12 col-md-12 col-lg-4 columnas">
+                <div class="col-sm-12 col-md-4 col-lg-4 columnas">
                     <ul>
                         <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
@@ -26,15 +26,29 @@
                         <a href="controlador/cerrarSesion.php"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-8 columnas principal">
+                <div class="col-sm-12 col-md-8 col-lg-8 columnas principal">
                     <h1>Modificar mis datos</h1>
-                    <form action="?controlador=usuario&accion=modificarDatos">
+                    <form action="?controlador=usuario&accion=modificarDatosUsuario" method="post">
+                        <label>Correo</label>
+                        <input type="email" name="correo" value="<?= $usuario->getCorreo() ?>">
 
+                        <label>Contraseña</label>
+                        <input type="password" name="contraseña" value="<?= $usuario->getContraseña() ?>">
+
+                        <label>Confirmar contraseña</label>
+                        <input type="password" name="confirmar_contraseña" value="<?= $usuario->getContraseña() ?>">
+
+                        <label>Nombre</label>
+                        <input type="text" name="nombre" value="<?= $usuario->getNombre() ?>">
+
+                        <label>Apellido</label>
+                        <input type="text" name="apellido" value="<?= $usuario->getApellido() ?>">
+                        
+                        <label>Fecha nacimiento</label>
+                        <input type="date" name="fecha_nacimiento" value="<?= $usuario->getFecha_nacimiento() ?>">
+
+                        <input type="submit" value="Modificar datos">
                     </form>
-                    <p>Nombre de usuario: <?= $usuario->getNombre() ?></p>
-                    <p>Apellido: <?= $usuario->getApellido() ?></p>
-                    <p>Correo electrónico: <?= $usuario->getCorreo() ?></p>
-                    <p>Fecha de nacimiento: <?= $usuario->getFecha_nacimiento() ?></p>
                 </div>
             </div>
         </div>

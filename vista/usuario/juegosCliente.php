@@ -27,11 +27,8 @@
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-8 columnas principal">
-                    <h1>Información del usuario</h1>
-                    <p>Nombre de usuario: <?= $usuario->getNombre() ?></p>
-                    <p>Apellido: <?= $usuario->getApellido() ?></p>
-                    <p>Correo electrónico: <?= $usuario->getCorreo() ?></p>
-                    <p>Fecha de nacimiento: <?= $usuario->getFecha_nacimiento() ?></p>
+                    <h1>Biblioteca del usuario</h1>
+                    
                 </div>
             </div>
         </div>

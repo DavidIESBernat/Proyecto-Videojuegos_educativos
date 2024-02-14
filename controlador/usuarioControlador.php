@@ -93,5 +93,26 @@
                 include_once 'vista/footer.php';
             }
         }
+
+        public static function modificarDatosUsuario() {
+            if (isset($_POST['correo'], $_POST['contraseña'], $_POST['confirmar_contraseña'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
+                $correo = $_POST['correo']; 
+                $contraseña = $_POST['contraseña'];
+                $confirmar_contraseña = $_POST['confirmar_contraseña']; 
+                $nombre = $_POST['nombre'];
+                $apellido = $_POST['apellido'];
+                $fecha_nacimiento = $_POST['fecha_nacimiento'];
+                $id_usuario = $_SESSION['Usuario']->getId_usuario();
+            
+                if ($contraseña == $confirmar_contraseña) {
+                    UsuarioDAO::modificarDatos($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento, $id_usuario);
+                    header('Location:'.url.'?controlador=usuario');
+                } else {
+                    header('Location:'.url.'?controlador=usuario&accion=modificarDatos&error=Las contraseñas no coinciden');
+                }
+            } else {
+                header('Location:'.url.'?controlador=usuario&accion=modificarDatos');
+            }
+        }
     }
 ?>

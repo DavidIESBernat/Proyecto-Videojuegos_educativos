@@ -18,7 +18,7 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
-                <div class="col-sm-12 col-md-12 col-lg-4 columnas">
+                <div class="col-sm-12 col-md-4 col-lg-4 columnas">
                     <ul>
                         <a href="?controlador=usuario"><li class="active">Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
@@ -26,7 +26,7 @@
                         <a href="controlador/cerrarSesion.php"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-8 columnas principal">
+                <div class="col-sm-12 col-md-8 col-lg-8 columnas principal">
                     <h1>Información del usuario</h1>
                     <p>Nombre de usuario: <?= $usuario->getNombre() ?></p>
                     <p>Apellido: <?= $usuario->getApellido() ?></p>

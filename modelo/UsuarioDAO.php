@@ -37,5 +37,11 @@
                 header('Location:'.url.'?controlador=usuario&accion=paginaRegistro');
             }
         }
+
+        public static function modificarDatos($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento, $id_usuario) {
+            $con = dataBase::connect();
+            
+            $con->query("UPDATE usuarios SET `correo` = '$correo', `contraseña` = '$contraseña', `nombre` = '$nombre', `apellido` = '$apellido', `fecha_nacimiento` = '$fecha_nacimiento' WHERE id_usuario = '$id_usuario'");   
+        }
     }
 ?>
