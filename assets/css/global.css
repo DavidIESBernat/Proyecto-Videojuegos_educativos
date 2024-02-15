@@ -51,11 +51,21 @@ body { /*Actua sobre el body definiendo el mismo*/
     justify-content: center;
 }
 
+.mainContainer {
+    max-width: 1080px;
+    margin: auto;
+    background-color: var(--colorPrimario);
+    box-shadow: 0 16px 16px rgba(0, 0, 0, 0.25); 
+}
+
 .alignCenter {
     display: flex;
     align-items: center;
 }
 
+.textCenter {
+    text-align: center;
+}
 .font600 {
 font-weight: 600;
 }
@@ -88,3 +98,13 @@ font-weight: 600;
     align-items: center;
 }
 
+.btnSimple {
+    background-color: var(--color1);
+    color: var(--colorPrimario);
+    border-radius: 10px;
+    border: 0px;
+}
+
+.btnSimple:hover {
+    background-color: var(--color5);
+}

@@ -1,5 +1,8 @@
 <?php
 include_once 'config/parameters.php';
+
+include_once 'modelo/Usuario.php';
+include_once 'modelo/UsuarioDAO.php';
 // Incluir controladores
 include_once 'controlador/principalControlador.php';
 include_once 'controlador/bibliotecaControlador.php';

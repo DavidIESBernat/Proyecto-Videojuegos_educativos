@@ -44,7 +44,7 @@ fetch(`http://aprendejugando.com/?controlador=api&accion=mostrarVideojuegos`)
                 <a href="" class="elemento">
                 <div class="containerImagen" style="background-image: url(assets/images/${videojuego.img})"></div>
                     <div class="containerElemento">
-                        <p class="primary p-no-margin">${videojuego.nombre}</p>
+                        <p class="primary p-no-margin textCenter">${videojuego.nombre}</p>
                     </div>
                 </a>
             `;

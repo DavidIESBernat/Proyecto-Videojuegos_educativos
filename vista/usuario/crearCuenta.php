@@ -6,13 +6,13 @@
     <link href="assets/css/formularios.css" rel="stylesheet" type="text/css" media="screen">
     <title>Registro</title>
 </head>
-<body class="cuerpo">
-    <div class="container-fluid">
+<body>
+    <div class="container-fluid mainContainer">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-12 col-lg-12 columna">
-                    <h1>Crear cuenta</h1>
                     <form action="?controlador=usuario&accion=crearUsuario" method="post">
+                        <h1>Crear cuenta</h1>
                         <label>Correo</label>
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
 

@@ -56,6 +56,7 @@
                 include_once 'vista/home.php';
             } else {
                 $usuarios = UsuarioDAO::getAllUsuarios();
+                $id_usuario = $_SESSION['Usuario']->getId_usuario();
 
                 include_once 'vista/header.php';
                 include_once 'vista/usuario/juegosCliente.php';
@@ -69,6 +70,7 @@
                 include_once 'vista/home.php';
             } else {
                 $usuarios = UsuarioDAO::getAllUsuarios();
+                $id_usuario = $_SESSION['Usuario']->getId_usuario();
 
                 include_once 'vista/header.php';
                 include_once 'vista/usuario/modificarDatosCliente.php';
@@ -78,7 +80,8 @@
         
         public static function logout() {
             session_start(); 
-            session_destroy(); 
+            unset($_SESSION['Usuario']);
+            header("Location:".url."?controlador=principal");
         }
     }
 ?>

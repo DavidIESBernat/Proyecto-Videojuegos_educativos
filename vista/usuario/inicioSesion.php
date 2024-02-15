@@ -6,21 +6,21 @@
     <link href="assets/css/formularios.css" rel="stylesheet" type="text/css" media="screen">
     <title>Inicio de Sesión</title>
 </head>
-<body class="cuerpo">
-    <div class="container-fluid">
+<body>
+    <div class="container-fluid mainContainer">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-12 col-lg-12 columna">
-                    <h1>Iniciar sesión</h1>
+                <div class="col-sm-12 col-md-12 col-lg-12 columna ">
                     <form action="?controlador=usuario&accion=iniciarSesion" method="post">
+                        <h1 class="primary">Iniciar sesión</h1>
                         <label>Correo</label>
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
 
                         <label>Contraseña</label>
-                        <input type="password" name="contraseña" placeholder="Contraseña1234">
+                        <input type="password" name="contraseña" placeholder="Contraseña">
 
                         <div class="boton-y-enlace">
-                            <input type="submit" value="Iniciar sesión">
+                            <input class="btnEnviar" type="submit" value="Iniciar sesión">
                             <p>¿No tienes una cuenta? <a href="?controlador=usuario&accion=paginaRegistro">Crear una cuenta</a></p>
                         </div>
                     </form>
