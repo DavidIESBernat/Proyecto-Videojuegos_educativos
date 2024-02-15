@@ -71,7 +71,7 @@
             if (!isset($_GET['controlador'])) {
                 include_once 'vista/home.php';
             } else {
-                $usuarios = UsuarioDAO::getAllUsuarios();
+                $juegos_usuarios = JuegosUsuariosDAO::getAllJuegosUsuarios();
                 $id_usuario = $_SESSION['Usuario']->getId_usuario();
 
                 include_once 'vista/header.php';

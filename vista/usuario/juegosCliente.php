@@ -12,8 +12,9 @@
 </head>
 <body>
     <?php
-        foreach($usuarios as $usuario) {
-            if ($usuario->getId_usuario() == $id_usuario) {
+        foreach($juegos_usuarios as $juego_usuario) {
+            if ($juego_usuario->getUsuario_id() == $id_usuario) {
+                echo $juego_usuario->getJuego_id();
     ?>
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
@@ -28,7 +29,12 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-8 columnas principal">
                     <h1>Biblioteca del usuario</h1>
-                    
+                    <a href="?controlador=biblioteca&accion=game&videojuego_id=" class="elemento">
+                        <div class="containerImagen" style="background-image: url(assets/images/)"></div>
+                        <div class="containerElemento">
+                            <p class="primary p-no-margin"></p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@ fetch(`http://localhost/Proyecto-Videojuegos_educativos/?controlador=api&accion=
             let div = document.createElement("div");
             div.classList.add("col-sm-12", "col-md-6", "col-lg-3");
             div.innerHTML = `
-                <a href="" class="elemento">
+                <a href="?controlador=biblioteca&accion=game&videojuego_id=${videojuego.videojuego_id}" class="elemento">
                 <div class="containerImagen" style="background-image: url(assets/images/${videojuego.img})"></div>
                     <div class="containerElemento">
                         <p class="primary p-no-margin">${videojuego.nombre}</p>
