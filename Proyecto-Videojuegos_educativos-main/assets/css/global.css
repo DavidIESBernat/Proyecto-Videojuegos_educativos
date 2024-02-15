@@ -1,0 +1,90 @@
+/*CSS principal donde declarar instrucciones que se pueden utilizar en todas las vistas*/
+
+@charset "utf-8";
+
+/* Fuente predeterminada */
+@font-face {
+    font-family: Source Sans Pro,sans-serif;
+    src: url(../fonts/SourceSansPro-Regular.ttf);
+}
+
+:root { /*Variables de la hoja de estilo actual*/
+    /* Colores definidos */
+    --colorFondo: #F1F1F1;
+    --colorPrimario: #FFFFFF;
+    --colorSecundario: #000000;
+    --color1: #1E1E1E;
+    --color2: #00A3FF;
+    --color3: #4DBFFF;
+    --color4: #00CC08;
+    --color5: #66CA6A;
+}
+a {
+    text-decoration: none;
+  }
+  
+body { /*Actua sobre el body definiendo el mismo*/
+    margin: auto;
+    margin-top: 120px; 
+    background-image: url('../images/fondo_dibujos2.jpg');
+    background-repeat: repeat;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: end;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.alignCenter {
+    display: flex;
+    align-items: center;
+}
+
+.font600 {
+font-weight: 600;
+}
+
+.primary {
+    color: var(--colorPrimario);
+}
+
+.secondary {
+    color: var(--colorSecundario);
+}
+
+.p-no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.no-margin-row {
+    --bs-gutter-x: 0rem;
+}
+
+/*Seccion de Titulo*/
+.section-title {
+    margin: auto;
+    height: 120px;
+    background-color: var(--color5);
+    color: var(--colorPrimario) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
