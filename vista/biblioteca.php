@@ -25,10 +25,6 @@
 
                 <div class="opcion-filtro">
                     <input class="checkbox" type="checkbox">
-                    <p>Juegos de historia</p>
-                </div>
-                <div class="opcion-filtro">
-                    <input class="checkbox" type="checkbox">
                     <p>Juegos Matematicos</p>
                 </div>
                 <div class="opcion-filtro">
