@@ -4,6 +4,7 @@
         protected $nombre;
         protected $descripcion;
         protected $img;
+        protected $categoria_id;
 
         /**
          * Get the value of videojuego_id
@@ -81,6 +82,26 @@
         public function setImg($img)
         {
                 $this->img = $img;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of categoria_id
+         */ 
+        public function getCategoria_id()
+        {
+                return $this->categoria_id;
+        }
+
+        /**
+         * Set the value of categoria_id
+         *
+         * @return  self
+         */ 
+        public function setCategoria_id($categoria_id)
+        {
+                $this->categoria_id = $categoria_id;
 
                 return $this;
         }

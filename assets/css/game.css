@@ -5,6 +5,9 @@
     margin: auto;
 }
 
+.containerText {
+    margin-right: 20px;
+}
 .containerGameContent {
     display: flex;
     max-width: 1080px;

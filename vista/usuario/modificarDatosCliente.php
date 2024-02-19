@@ -24,26 +24,34 @@
                 </div>
                 <div class="col-sm-12 col-md-8 col-lg-8 columnas principal">
                     <h1>Modificar mis datos</h1>
-                    <form action="?controlador=usuario&accion=modificarDatosUsuario" method="post">
-                        <label>Correo</label>
-                        <input type="email" name="correo" value="<?= $usuario->getCorreo() ?>">
-
-                        <label>Contraseña</label>
-                        <input type="password" name="contraseña" value="<?= $usuario->getContraseña() ?>">
-
-                        <label>Confirmar contraseña</label>
-                        <input type="password" name="confirmar_contraseña" value="<?= $usuario->getContraseña() ?>">
-
-                        <label>Nombre</label>
-                        <input type="text" name="nombre" value="<?= $usuario->getNombre() ?>">
-
-                        <label>Apellido</label>
-                        <input type="text" name="apellido" value="<?= $usuario->getApellido() ?>">
-                        
-                        <label>Fecha nacimiento</label>
-                        <input type="date" name="fecha_nacimiento" value="<?= $usuario->getFecha_nacimiento() ?>">
-
-                        <input type="submit" value="Modificar datos">
+                    <form action="?controlador=usuario&accion=modificarDatosUsuario" method="post" class="row">
+                        <div class="col-12">
+                            <label class="col-10">Correo</label>
+                            <input class="col-10" type="email" name="correo" value="<?= $usuario->getCorreo() ?>">
+                        </div>                     
+                        <div class="col-12">
+                            <label class="col-10">Contraseña</label>
+                            <input class="col-10"  type="password" name="contraseña" value="<?= $usuario->getContraseña() ?>">
+                        </div>
+                        <div class="col-12">
+                            <label class="col-10" >Confirmar contraseña</label>
+                            <input class="col-10"  type="password" name="confirmar_contraseña" value="<?= $usuario->getContraseña() ?>">
+                        </div>
+                        <div class="col-12">
+                            <label class="col-10" >Nombre</label>
+                            <input class="col-10"  type="text" name="nombre" value="<?= $usuario->getNombre() ?>">
+                        </div>
+                        <div class="col-12">
+                            <label class="col-10" >Apellido</label>
+                            <input class="col-10"  type="text" name="apellido" value="<?= $usuario->getApellido() ?>">
+                        </div>
+                        <div class="col-12">
+                            <label class="col-10" >Fecha nacimiento</label>
+                            <input class="col-10"  type="date" name="fecha_nacimiento" value="<?= $usuario->getFecha_nacimiento() ?>">
+                        </div>
+                        <div class="col-12">
+                            <input class="btnSimple boton" type="submit" value="Modificar datos">
+                        </div>
                     </form>
                 </div>
             </div>

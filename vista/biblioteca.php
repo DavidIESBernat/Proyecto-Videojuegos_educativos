@@ -19,13 +19,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <button id="btnFiltrar" class="btnSimple">Filtrar</button>
-                <button id="btnMostrarTodos" class="btnSimple">Mostrar Todos</button>
 
-                <div class="opcion-filtro">
-                    <input class="checkbox" type="checkbox">
-                    <p>Juegos de historia</p>
-                </div>
                 <div class="opcion-filtro">
                     <input class="checkbox" type="checkbox">
                     <p>Juegos Matematicos</p>
@@ -42,6 +36,48 @@
                     <input class="checkbox" type="checkbox">
                     <p>Juegos de Idiomas</p>
                 </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Habilidades Cognitivas</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Habilidades Sociales</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Habilidades Artísticas</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Geografía</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Ciencias sociales</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Programación y Lógica</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Salud y Bienestar</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Ecología</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Literatura y Escritura</p>
+                </div>
+                <div class="opcion-filtro">
+                    <input class="checkbox" type="checkbox">
+                    <p>Juegos de Educación Financiera</p>
+                </div>
+                <button id="btnFiltrar" class="btnSimple boton">Filtrar</button>
+                <button id="btnMostrarTodos" class="btnSimple boton"> Mostrar Todos</button>
             </div>
         </div>
 

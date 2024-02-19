@@ -12,7 +12,7 @@
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-12 col-lg-12 columna">
                     <form action="?controlador=usuario&accion=crearUsuario" method="post">
-                        <h1>Crear cuenta</h1>
+                        <h1 class="primary">Crear cuenta</h1>
                         <label>Correo</label>
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
 

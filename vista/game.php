@@ -16,20 +16,23 @@
             <div class="containerGameContent">
                 <div class="containerGameIzquierdo ">
                     <div class="elemento">
-                        <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+                        <div class="containerImagen" style="background-image: url(assets/images/<?= $videojuego->getImg() ?>)"></div>
                     </div>
                 </div>
                 <div class="containerGameDerecho flex-column">
                     <div class="containerText">
-                        <p class="categoria p-no-margin">Categoria: <span class="categoriaNombre">Nombre</span></p>
-                        <h1 class="titulo p-no-margin">Titulo</h1>
+                        <p class="categoria p-no-margin">Categoria: <span class="categoriaNombre"><?= $categoria->getNombre_categoria() ?></span></p>
+                        <h1 class="titulo p-no-margin"><?= $videojuego->getNombre() ?></h1>
                     </div>
                     <div class="containerDescription">
-                        <p class="descripcion p-no-margin">Descripcion: <span>Ebis vendae eaqui solupta turera prepe parum ut estrum, cus as nient aut aut pa nost, consed ut reroribus ex ea dolor as secestrum qui con preprae sequam ipsaeperum is ipsamus aectibustior accae perovit quas as modipsunt ut volorro beatemolenis veremporum quianda perchil es quam eum</span></p>
+                        <p class="descripcion p-no-margin">Descripcion: <span><?= $videojuego->getDescripcion() ?></span></p>
                     </div>
                     <div class="containerBtn flex-row">
-                        <button class="btnGame">Jugar</button>
-                        <button class="btnGame">Descargar</button>
+                        <form action="?controlador=biblioteca&accion=videojuegoJugado" method="post">
+                            <input type="hidden" name="videojuego_id" value="<?= $videojuego->getVideojuego_id() ?>">
+                            <input type="submit" class="btnSimple btnGame " value="Jugar">
+                            <input type="submit" class="btnSimple btnGame" value="Descargar">
+                        </form>
                     </div> 
                 </div>
                 

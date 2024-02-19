@@ -2,12 +2,6 @@
 
 @charset "utf-8";
 
-/* Fuente predeterminada */
-@font-face {
-    font-family: Source Sans Pro,sans-serif;
-    src: url(../fonts/SourceSansPro-Regular.ttf);
-}
-
 :root { /*Variables de la hoja de estilo actual*/
     /* Colores definidos */
     --colorFondo: #F1F1F1;
@@ -19,6 +13,7 @@
     --color4: #00CC08;
     --color5: #66CA6A;
 }
+
 a {
     text-decoration: none;
   }
@@ -107,4 +102,11 @@ font-weight: 600;
 
 .btnSimple:hover {
     background-color: var(--color5);
+}
+
+.boton {
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
 }
