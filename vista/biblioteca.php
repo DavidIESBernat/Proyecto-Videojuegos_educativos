@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/biblioteca.css" rel="stylesheet" type="text/css" media="screen">
-    <title>Biblioteca</title>
+    <title>Biblioteca - Aprende Jugando</title>
 </head>
 <body>
     <div class="mainContainer bg-white">

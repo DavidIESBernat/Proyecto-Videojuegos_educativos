@@ -1,5 +1,5 @@
 <?php
-    class JuegosUsuario {
+    class JuegosUsuarios {
         protected $juego_id;
         protected $usuario_id;
 

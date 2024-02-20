@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/formularios.css" rel="stylesheet" type="text/css" media="screen">
-    <title>Inicio de Sesión</title>
+    <title>Iniciar Sesion - Aprende Jugando</title>
 </head>
 <body>
     <div class="container-fluid mainContainer">

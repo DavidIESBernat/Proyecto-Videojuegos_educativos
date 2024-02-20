@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <link href="assets/css/game.css" rel="stylesheet" type="text/css" media="screen">
-    
+    <title>Mostrar juego - Aprende Jugando</title>
 </head>
 <body>
     <div class="containerGame flex-column">
