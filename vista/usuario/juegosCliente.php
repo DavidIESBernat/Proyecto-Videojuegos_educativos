@@ -11,11 +11,6 @@
     <title>Registro</title>
 </head>
 <body>
-    <?php
-        foreach($juegos_usuarios as $juego_usuario) {
-            if ($juego_usuario->getUsuario_id() == $id_usuario) {
-                echo $juego_usuario->getJuego_id();
-    ?>
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
@@ -29,20 +24,24 @@
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-8 columnas principal">
                     <h1>Biblioteca del usuario</h1>
-                    <a href="?controlador=biblioteca&accion=game&videojuego_id=" class="elemento">
-                        <div class="containerImagen" style="background-image: url(assets/images/)"></div>
-                        <div class="containerElemento">
-                            <p class="primary p-no-margin"></p>
-                        </div>
-                    </a>
+                    <?php
+                        foreach($juegos_usuarios as $juego_usuario) {
+                            if ($juego_usuario->getUsuario_id() == $id_usuario) {
+                                $id = $juego_usuario->getJuego_id();
+                                $videojuego = VideojuegoDAO::getVideojuegoById($id);
+                    ?>
+                    <div class="div-juego">
+                        <p class="p-juego"><?= $videojuego->getNombre() ?></p>
+                        <a href="?controlador=biblioteca&accion=game&videojuego_id=<?=$videojuego->getVideojuego_id()?>">Jugar</a>
+                    </div>
+                    <?php
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
     </div>
-    <?php
-            }
-        }
-    ?>
    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

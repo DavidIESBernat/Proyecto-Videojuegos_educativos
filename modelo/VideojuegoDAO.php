@@ -24,9 +24,18 @@
         }
 
         public static function videojuegoJugado($videojuego_id, $usuario_id) {
-            $con = database::connect();
-
-            $con->query("INSERT INTO `juegos_usuarios`(`juego_id`, `usuario_id`) VALUES ('$videojuego_id','$usuario_id')");
+            $con = dataBase::connect();
+            
+            $result = $con->query("SELECT COUNT(*) AS total FROM `juegos_usuarios` WHERE `juego_id` = '$videojuego_id' AND `usuario_id` = '$usuario_id'");
+            $row = $result->fetch_assoc();
+            $total = $row['total'];
+        
+            if ($total == 0) {
+                $con->query("INSERT INTO `juegos_usuarios` (`juego_id`, `usuario_id`) VALUES ('$videojuego_id','$usuario_id')");
+            } else {
+                header('Location:'.url.'?controlador=biblioteca');
+            }
         }
+        
     }
 ?>
