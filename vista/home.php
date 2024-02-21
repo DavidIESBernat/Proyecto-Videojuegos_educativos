@@ -37,9 +37,18 @@
             <h2 class="">Juegos destacados</h2>
         </div>
         <div class="seccion-contenido">
-            <section class="elemento"></section>
-            <section class="elemento"></section>
-            <section class="elemento"></section>
+        <?php
+            foreach ($videojuegos as $videojuego) {
+        ?>
+        <a href="?controlador=biblioteca&accion=game&videojuego_id=<?= $videojuego->getVideojuego_id() ?>" class="elemento">
+            <div class="containerImagen" style="background-image: url(assets/images/<?=$videojuego->getImg()?>)"></div>
+            <div class="containerElemento">
+                <p class="primary p-no-margin"><?= $videojuego->getNombre() ?></p>
+            </div>
+        </a>
+        <?php
+            }
+        ?>
         </div>
         
     </section>

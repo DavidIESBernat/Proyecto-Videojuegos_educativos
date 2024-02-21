@@ -18,9 +18,33 @@
     }
     
     .elemento {
-        min-height: 250px;
-        min-width: 250px;
-        background-color: var(--color1);
-        border-radius: 10%;
+        height: 250px;
+        width: 250px;
         margin: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        border-radius: 25px 25px;
+        border: 0px;
+        position: relative;
+        overflow: hidden;
+    }      
+    .containerElemento{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1E1E1E80;
+        border-radius: 0 0 25px 25px;
+        margin-top: -50px;
+        height: 50px;
+        font-weight: 600;
+        overflow: hidden;
+        position: relative;
+    }   
+    .containerImagen {
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 25px 25px;
+        transition: transform 0.5s ease-in-out;
     }

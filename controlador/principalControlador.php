@@ -9,6 +9,8 @@ class principalControlador {
     // Funcion predeterminada del controlador
     public function index() {
 
+        $videojuegos = VideojuegoDAO::videojuegosMasJugados();
+
         // Header
         include_once 'vista/header.php';
 
