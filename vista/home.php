@@ -17,10 +17,10 @@
                     <img class="d-block w-100" src="assets/images/mathland.svg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/minecraft.webp" alt="Second slide">
+                    <img class="d-block w-100" src="assets/images/MinecraftEducationEdition.webp" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="assets/images/oncity.jpg" alt="Second slide">
+                    <img class="d-block w-100" href="" src="assets/images/ValiantHeartsTheGreatWar.jpg" alt="Third slide">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -37,22 +37,22 @@
             <h2 class="">Juegos destacados</h2>
         </div>
         <div class="seccion-contenido col-12 row no-margin-row">
-            <a href="" class="elemento col-4">
-                <div class="containerImagen" style="background-image: url(assets/images/placeholder.jpg)"></div>
+            <a href="?controlador=biblioteca&accion=game&videojuego_id=57" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/mathlandMini.jpg)"></div>
                 <div class="containerElemento">
-                    <p class="primary p-no-margin">Placeholder</p>
+                    <p class="primary p-no-margin">Mathland</p>
                 </div>
             </a>
-            <a href="" class="elemento col-4">
-                <div class="containerImagen" style="background-image: url(assets/images/oncity.jpg)"></div>
+            <a href="?controlador=biblioteca&accion=game&videojuego_id=26" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/MinecraftEducationEdition.jpg)"></div>
                 <div class="containerElemento">
-                    <p class="primary p-no-margin">Placeholder</p>
+                    <p class="primary p-no-margin">Minecraft: Education Edition</p>
                 </div>
             </a>
-            <a href="" class="elemento col-4">
-                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
+            <a href="?controlador=biblioteca&accion=game&videojuego_id=34" class="elemento col-4">
+                <div class="containerImagen" style="background-image: url(assets/images/ValiantHeartsTheGreatWar.jpg)"></div>
                 <div class="containerElemento">
-                    <p class="primary p-no-margin">Placeholder</p>
+                    <p class="primary p-no-margin">Valiant Hearts: The Great War</p>
                 </div>
             </a>
         </div>
@@ -65,27 +65,21 @@
             <a class="containerRSS col-4"><img class="img-rss" src="assets/images/youtube.svg" alt="Youtube"></a>
         </div>-->
         <div class="section-title col-12">
-            <h2 class="">Juegos añadidos recientemente</h2>
+            <h2 class="">Juegos más jugados</h2>
         </div>
         <div class="seccion-contenido col-12 row no-margin-row">
-            <a href="" class="elemento col-4">
-                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
-                <div class="containerElemento">
-                    <p class="primary p-no-margin">Placeholder</p>
-                </div>
-            </a>
-            <a href="" class="elemento col-4">
-                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
-                <div class="containerElemento">
-                    <p class="primary p-no-margin">Placeholder</p>
-                </div>
-            </a>
-            <a href="" class="elemento col-4">
-                <div class="containerImagen" style="background-image: url(assets/images/logoProvisional.svg)"></div>
-                <div class="containerElemento">
-                    <p class="primary p-no-margin">Placeholder</p>
-                </div>
-            </a>
+        <?php
+            foreach ($videojuegos as $videojuego) {
+        ?>
+        <a href="?controlador=biblioteca&accion=game&videojuego_id=<?= $videojuego->getVideojuego_id() ?>" class="elemento col-4">
+            <div class="containerImagen" style="background-image: url(assets/images/<?=$videojuego->getImg()?>)"></div>
+            <div class="containerElemento">
+                <p class="primary p-no-margin"><?= $videojuego->getNombre() ?></p>
+            </div>
+        </a>
+        <?php
+            }
+        ?>
         </div>
     </section>
 

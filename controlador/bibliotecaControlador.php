@@ -36,11 +36,16 @@
         }
 
         public static function videojuegoJugado() {
-            $videojuego_id = $_POST['videojuego_id'];
-            $usuario_id = $_SESSION['Usuario']->getId_usuario();
-
-            VideojuegoDAO::videojuegoJugado($videojuego_id, $usuario_id);
-            header('Location:'.url.'?controlador=biblioteca');
-        }
+            if (isset($_SESSION['Usuario'])) {
+                $videojuego_id = $_POST['videojuego_id'];
+                $usuario_id = $_SESSION['Usuario']->getId_usuario();
+                VideojuegoDAO::videojuegoJugado($videojuego_id, $usuario_id);
+                header('Location: ' . url . '?controlador=biblioteca&accion=game&videojuego_id=' . $videojuego_id);
+            } else {
+                include_once 'vista/header.php';
+                include_once 'vista/usuario/inicioSesion.php';
+                include_once 'vista/footer.php';
+            }
+        }        
     }
 ?>

@@ -10,7 +10,7 @@
 <body>
     <div class="containerGame flex-column">
         <div class="containerGameTop">
-            <a href="" class="btnVolver"><span class="flecha"><</span> Volver</a>
+            <a href="?controlador=biblioteca" class="btnVolver"><span class="flecha"><</span> Volver</a>
         </div>
         <div class="containerGameBottom ">
             <div class="containerGameContent">
@@ -23,9 +23,10 @@
                     <div class="containerText">
                         <p class="categoria p-no-margin">Categoria: <span class="categoriaNombre"><?= $categoria->getNombre_categoria() ?></span></p>
                         <h1 class="titulo p-no-margin"><?= $videojuego->getNombre() ?></h1>
+                        <p class="p-no-margin">Veces Jugado: <?= $videojuego->getVisitas()?></p>
                     </div>
                     <div class="containerDescription">
-                        <p class="descripcion p-no-margin">Descripcion: <span><?= $videojuego->getDescripcion() ?></span></p>
+                        <p class="descripcion p-no-margin"><span><?= $videojuego->getDescripcion() ?></span></p>
                     </div>
                     <div class="containerBtn flex-row">
                         <form action="?controlador=biblioteca&accion=videojuegoJugado" method="post">

@@ -25,10 +25,12 @@
                             if ($juego_usuario->getUsuario_id() == $id_usuario) {
                                 $id = $juego_usuario->getJuego_id();
                                 $videojuego = VideojuegoDAO::getVideojuegoById($id);
+                                $visitas_totales = VideojuegoDAO::obtenerVisitasUsuario($id_usuario, $id);
                     ?>
                     <div class="div-juego">
                         <p class="p-juego p-no-margin"><?= $videojuego->getNombre() ?></p>
                         <a class="btnSimple boton" href="?controlador=biblioteca&accion=game&videojuego_id=<?=$videojuego->getVideojuego_id()?>">Jugar</a>
+                        <p>Visitas Totales: <?=$visitas_totales?></p>
                     </div>
                     <?php
                             }

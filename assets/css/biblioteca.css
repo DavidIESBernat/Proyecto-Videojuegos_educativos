@@ -28,6 +28,7 @@
     font-weight: 600;
     overflow: hidden;
     position: relative;
+    text-align: center;
 }   
 .containerImagen {
     height: 100%;

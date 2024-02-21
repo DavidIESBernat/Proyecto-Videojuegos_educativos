@@ -2,6 +2,7 @@
     class JuegosUsuarios {
         protected $juego_id;
         protected $usuario_id;
+        protected $visitas;
 
         /**
          * Get the value of juego_id
@@ -39,6 +40,26 @@
         public function setUsuario_id($usuario_id)
         {
                 $this->usuario_id = $usuario_id;
+
+                return $this;
+        }
+
+        /**
+         * Get the value of visitas
+         */ 
+        public function getVisitas()
+        {
+                return $this->visitas;
+        }
+
+        /**
+         * Set the value of visitas
+         *
+         * @return  self
+         */ 
+        public function setVisitas($visitas)
+        {
+                $this->visitas = $visitas;
 
                 return $this;
         }
