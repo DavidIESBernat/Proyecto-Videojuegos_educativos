@@ -76,3 +76,7 @@
     transform: scale(1.1);
     object-fit: cover;
   }
+
+  .botonInicio {
+    color: var(--color1);
+    }

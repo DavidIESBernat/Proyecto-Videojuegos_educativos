@@ -44,3 +44,7 @@ a {
     max-height: 35px;
     margin-top: 0px;
 }
+
+.botonUsuario {
+    color: var(--color1);
+    }

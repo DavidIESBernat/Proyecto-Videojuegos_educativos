@@ -19,6 +19,7 @@
                         <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
                         <a href="?controlador=usuario&accion=modificarDatos"><li class="active">Modificar datos</li></a>
+                        <a href="?controlador=usuario&accion=modificarContraseña"><li>Modificar contraseña</li></a>
                         <a href="?controlador=usuario&accion=logout"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>

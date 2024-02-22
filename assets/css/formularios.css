@@ -47,3 +47,7 @@ input[type="email"], input[type="password"] {
 .boton-y-enlace p {
     margin: 0;
 }
+
+.botonLogin {
+    color: var(--color1);
+    }
