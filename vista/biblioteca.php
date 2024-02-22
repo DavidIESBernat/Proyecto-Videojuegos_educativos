@@ -82,6 +82,10 @@
             </div>
         </div>
 
+        <div id="loading">
+            <img src="assets/gif/loading.gif" alt="Cargando...">
+        </div>
+
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center" id="div_videojuegos">
 

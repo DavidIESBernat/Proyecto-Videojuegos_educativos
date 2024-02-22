@@ -23,6 +23,7 @@
                         <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
                         <a href="?controlador=usuario&accion=modificarDatos"><li class="active">Modificar datos</li></a>
+                        <a href="?controlador=usuario&accion=paginaModificarContraseña"><li>Modificar Contraseña</li></a>
                         <a href="controlador/cerrarSesion.php"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
@@ -31,12 +32,6 @@
                     <form action="?controlador=usuario&accion=modificarDatosUsuario" method="post">
                         <label>Correo</label>
                         <input type="email" name="correo" value="<?= $usuario->getCorreo() ?>">
-
-                        <label>Contraseña</label>
-                        <input type="password" name="contraseña" value="<?= $usuario->getContraseña() ?>">
-
-                        <label>Confirmar contraseña</label>
-                        <input type="password" name="confirmar_contraseña" value="<?= $usuario->getContraseña() ?>">
 
                         <label>Nombre</label>
                         <input type="text" name="nombre" value="<?= $usuario->getNombre() ?>">

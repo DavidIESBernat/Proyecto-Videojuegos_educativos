@@ -21,7 +21,7 @@
                         <input type="password" name="contraseña" placeholder="Contraseña1234">
 
                         <label>Confirmar contraseña</label>
-                        <input type="password" name="confirmar_contraseña" placeholder="Contraseña1234">
+                        <input type="password" name="confirmar_contraseña" placeholder="Contraseña1234" minLength="8">
 
                         <label>Nombre</label>
                         <input type="text" name="nombre" placeholder="Juan">

@@ -20,19 +20,27 @@
             <div class="row justify-content-center cuerpo">
                 <div class="col-sm-12 col-md-4 col-lg-4 columnas">
                     <ul>
-                        <a href="?controlador=usuario"><li class="active">Mi cuenta</li></a>
+                        <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
                         <a href="?controlador=usuario&accion=modificarDatos"><li>Modificar datos</li></a>
-                        <a href="?controlador=usuario&accion=paginaModificarContraseña"><li>Modificar Contraseña</li></a>
+                        <a href="?controlador=usuario&accion=paginaModificarContraseña"><li class="active">Modificar Contraseña</li></a>
                         <a href="controlador/cerrarSesion.php"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-8 col-lg-8 columnas principal">
-                    <h1>Información del usuario</h1>
-                    <p>Nombre de usuario: <?= $usuario->getNombre() ?></p>
-                    <p>Apellido: <?= $usuario->getApellido() ?></p>
-                    <p>Correo electrónico: <?= $usuario->getCorreo() ?></p>
-                    <p>Fecha de nacimiento: <?= $usuario->getFecha_nacimiento() ?></p>
+                    <h1>Modificar mis datos</h1>
+                    <form action="?controlador=usuario&accion=modificarContraseña" method="post">
+                        <label>Contraseña actual</label>
+                        <input type="password" name="contraseña_actual">
+
+                        <label>Confirmar nueva</label>
+                        <input type="password" name="contraseña_nueva" placeholder="8 carácteres mínimo">
+
+                        <label>Confirmar nueva contraseña</label>
+                        <input type="password" name="repetir_contraseña_nueva">
+
+                        <input type="submit" value="Modificar datos">
+                    </form>
                 </div>
             </div>
         </div>

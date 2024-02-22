@@ -1,3 +1,15 @@
+// Muestra la animación de carga
+function showLoading() {
+    document.getElementById("loading").style.display = "block";
+}
+
+// Oculta la animación de carga
+function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+}
+
+showLoading(); // Mostrar animación de carga al principio
+
 fetch(`http://localhost/Proyecto-Videojuegos_educativos/?controlador=api&accion=mostrarVideojuegos`)
 .then(data => data.json())
 .then(videojuegos => {
@@ -50,6 +62,8 @@ fetch(`http://localhost/Proyecto-Videojuegos_educativos/?controlador=api&accion=
             row.appendChild(div);
         })
         div_videojuegos.appendChild(row);
+
+        hideLoading(); // Ocultar animación de carga cuando se completa la carga
     }
 
     mostrarVideojuegos(videojuegos, div_videojuegos);

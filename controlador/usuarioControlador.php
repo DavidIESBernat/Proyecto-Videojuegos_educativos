@@ -50,15 +50,13 @@
         }
 
         public static function crearUsuario() {
-            if (isset($_POST['correo'], $_POST['contraseña'], $_POST['confirmar_contraseña'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
+            if (isset($_POST['correo'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
                 $correo = $_POST['correo']; 
-                $contraseña = $_POST['contraseña'];
-                $confirmar_contraseña = $_POST['confirmar_contraseña']; 
                 $nombre = $_POST['nombre'];
                 $apellido = $_POST['apellido'];
                 $fecha_nacimiento = $_POST['fecha_nacimiento'];
 
-                UsuarioDAO::crearUsuario($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento);
+                UsuarioDAO::crearUsuario($correo, $nombre, $apellido, $fecha_nacimiento);
                 header('Location:'.url.'?controlador=usuario&accion=paginaIniciarSesion');
             } else {
                 header('Location:'.url.'?controlador=usuario&accion=paginaRegistro');
@@ -81,7 +79,6 @@
         }
 
         public static function modificarDatos() {
-            
             if (!isset($_GET['controlador'])) {
                 include_once 'vista/home.php';
             } else {
@@ -95,24 +92,46 @@
         }
 
         public static function modificarDatosUsuario() {
-            if (isset($_POST['correo'], $_POST['contraseña'], $_POST['confirmar_contraseña'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
+            if (isset($_POST['correo'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
                 $correo = $_POST['correo']; 
-                $contraseña = $_POST['contraseña'];
-                $confirmar_contraseña = $_POST['confirmar_contraseña']; 
                 $nombre = $_POST['nombre'];
                 $apellido = $_POST['apellido'];
                 $fecha_nacimiento = $_POST['fecha_nacimiento'];
                 $id_usuario = $_SESSION['Usuario']->getId_usuario();
             
-                if ($contraseña == $confirmar_contraseña) {
-                    UsuarioDAO::modificarDatos($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento, $id_usuario);
-                    header('Location:'.url.'?controlador=usuario');
-                } else {
-                    header('Location:'.url.'?controlador=usuario&accion=modificarDatos&error=Las contraseñas no coinciden');
-                }
+                UsuarioDAO::modificarDatos($correo, $nombre, $apellido, $fecha_nacimiento, $id_usuario);
+                header('Location:'.url.'?controlador=usuario');
+                
             } else {
                 header('Location:'.url.'?controlador=usuario&accion=modificarDatos');
             }
+        }
+
+        public static function paginaModificarContraseña() {
+            if (!isset($_GET['controlador'])) {
+                include_once 'vista/home.php';
+            } else {
+                $usuarios = UsuarioDAO::getAllUsuarios();
+                $id_usuario = $_SESSION['Usuario']->getId_usuario();
+
+                include_once 'vista/header.php';
+                include_once 'vista/usuario/modificarContraseña.php';
+                include_once 'vista/footer.php';
+            }
+        }
+
+        public static function modificarContraseña() {
+            if (isset($_POST['contraseña_actual'], $_POST['contraseña_nueva'], $_POST['repetir_contraseña_nueva'])) {
+                $contraseña_actual = $_POST['contraseña_actual'];
+                $contraseña_nueva = $_POST['contraseña_nueva'];
+                $repetir_contraseña_nueva = $_POST['repetir_contraseña_nueva'];
+                $id_usuario = $_SESSION['Usuario']->getId_usuario();
+
+                UsuarioDAO::modificarContraseña($contraseña_actual, $contraseña_nueva, $repetir_contraseña_nueva, $id_usuario);
+            } else {
+                header('Location:'.url.'?controlador=usuario&accion=paginaModificarContraseña');
+            }
+
         }
     }
 ?>
