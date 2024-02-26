@@ -15,7 +15,7 @@
                         <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li class="active">Biblioteca</li></a>
                         <a href="?controlador=usuario&accion=modificarDatos"><li>Modificar datos</li></a>
-                        <a href="?controlador=usuario&accion=modificarContraseña"><li>Modificar contraseña</li></a>
+                        <a href="?controlador=usuario&accion=paginaModificarContraseña"><li>Modificar Contraseña</li></a>
                         <a href="?controlador=usuario&accion=logout"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
@@ -28,10 +28,12 @@
                                 $videojuego = VideojuegoDAO::getVideojuegoById($id);
                                 $visitas_totales = VideojuegoDAO::obtenerVisitasUsuario($id_usuario, $id);
                     ?>
-                    <div class="div-juego">
-                        <p class="p-juego p-no-margin"><?= $videojuego->getNombre() ?></p>
+                    <div class="div-juego row">
+                        <div class="row">
+                            <p class="p-juego p-no-margin col-12 col-md-6"><?= $videojuego->getNombre() ?></p>
+                            <p class="p-juego p-no-margin col-12 col-md-6 flex-end">Veces jugado: <?=$visitas_totales?></p>
+                        </div>
                         <a class="btnSimple boton" href="?controlador=biblioteca&accion=game&videojuego_id=<?=$videojuego->getVideojuego_id()?>">Jugar</a>
-                        <p>Visitas Totales: <?=$visitas_totales?></p>
                     </div>
                     <?php
                             }

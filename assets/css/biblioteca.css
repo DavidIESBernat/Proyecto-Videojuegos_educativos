@@ -97,3 +97,12 @@
 .botonBiblioteca {
     color: var(--color1);
     }
+
+.div_loading {
+    margin: 50px;
+}
+
+#loading img {
+    width: 100px;
+    height: 100px;
+}

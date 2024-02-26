@@ -1,3 +1,14 @@
+// Muestra la animación de carga
+function showLoading() {
+    document.getElementById("loading").style.display = "block";
+}
+
+// Oculta la animación de carga
+function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+}
+
+showLoading(); // Mostrar animación de carga al principio
 
 fetch(`http://aprendejugando.com/?controlador=api&accion=mostrarVideojuegos`)
 .then(data => data.json())
@@ -51,6 +62,7 @@ fetch(`http://aprendejugando.com/?controlador=api&accion=mostrarVideojuegos`)
             row.appendChild(div);
         })
         div_videojuegos.appendChild(row);
+        hideLoading(); // Ocultar animación de carga cuando se completa la carga
     }
 
     mostrarVideojuegos(videojuegos, div_videojuegos);

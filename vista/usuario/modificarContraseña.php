@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="assets/css/cliente.css" rel="stylesheet" type="text/css" media="screen">
-     <title>Mis datos - Aprende Jugando</title>
+    <link href="assets/css/cliente.css" rel="stylesheet" type="text/css" media="screen">
+    <title>Modificar Contraseña - Aprende Jugando</title>
 </head>
 <body>
     <?php
@@ -18,33 +18,30 @@
                     <ul>
                         <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
-                        <a href="?controlador=usuario&accion=modificarDatos"><li class="active">Modificar datos</li></a>
-                        <a href="?controlador=usuario&accion=paginaModificarContraseña"><li>Modificar Contraseña</li></a>
+                        <a href="?controlador=usuario&accion=modificarDatos"><li>Modificar datos</li></a>
+                        <a href="?controlador=usuario&accion=paginaModificarContraseña"><li class="active">Modificar Contraseña</li></a>
                         <a href="?controlador=usuario&accion=logout"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-8 col-lg-8 columnas principal">
                     <h1>Modificar mis datos</h1>
-                    <form action="?controlador=usuario&accion=modificarDatosUsuario" method="post" class="row">
+                    <form action="?controlador=usuario&accion=modificarContraseña" method="post">
                         <div class="col-12">
-                            <label class="col-10">Correo</label>
-                            <input class="col-10" type="email" name="correo" value="<?= $usuario->getCorreo() ?>">
-                        </div>                     
-                        <div class="col-12">
-                            <label class="col-10" >Nombre</label>
-                            <input class="col-10"  type="text" name="nombre" value="<?= $usuario->getNombre() ?>">
+                            <label class="col-10">Contraseña actual</label>
+                            <input class="col-10" type="password" name="contraseña_actual" placeholder="">
                         </div>
                         <div class="col-12">
-                            <label class="col-10" >Apellido</label>
-                            <input class="col-10"  type="text" name="apellido" value="<?= $usuario->getApellido() ?>">
+                            <label class="col-10">Nueva Contraseña</label>
+                            <input class="col-10" type="password" name="contraseña_nueva" placeholder="">
                         </div>
                         <div class="col-12">
-                            <label class="col-10" >Fecha nacimiento</label>
-                            <input class="col-10"  type="date" name="fecha_nacimiento" value="<?= $usuario->getFecha_nacimiento() ?>">
+                            <label class="col-10">Repetir Contraseña</label>
+                            <input class="col-10" type="password" name="repetir_contraseña_nueva" placeholder="">
                         </div>
                         <div class="col-12">
-                            <input class="btnSimple boton" type="submit" value="Modificar datos">
+                            <input class="btnSimple boton" type="submit" value="Modificar contraseña">
                         </div>
+                        
                     </form>
                 </div>
             </div>
