@@ -14,7 +14,7 @@
     <div class="container-fluid mainContainer">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
-                <div class="col-sm-12 col-md-12 col-lg-4 columnas">
+                <div class="col-12 col-lg-4 columnas">
                     <ul>
                         <a href="?controlador=usuario"><li class="active">Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>
@@ -23,12 +23,12 @@
                         <a href="?controlador=usuario&accion=logout"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-8 columnas principal">
-                    <h1>Información del usuario</h1>
-                    <p>Nombre de usuario: <?= $usuario->getNombre() ?></p>
-                    <p>Apellido: <?= $usuario->getApellido() ?></p>
-                    <p>Correo electrónico: <?= $usuario->getCorreo() ?></p>
-                    <p>Fecha de nacimiento: <?= $usuario->getFecha_nacimiento() ?></p>
+                <div class="col-12 col-lg-8 columnas principal row">
+                    <h1 class="col-10">Información del usuario</h1>
+                    <p class="col-10">Nombre de usuario: <?= $usuario->getNombre() ?></p>
+                    <p class="col-10">Apellido: <?= $usuario->getApellido() ?></p>
+                    <p class="col-10">Correo electrónico: <?= $usuario->getCorreo() ?></p>
+                    <p class="col-10">Fecha de nacimiento: <?= $usuario->getFecha_nacimiento() ?></p>
                 </div>
             </div>
         </div>

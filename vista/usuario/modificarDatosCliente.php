@@ -43,7 +43,7 @@
                             <input class="col-10"  type="date" name="fecha_nacimiento" value="<?= $usuario->getFecha_nacimiento() ?>">
                         </div>
                         <div class="col-12">
-                            <input class="btnSimple boton" type="submit" value="Modificar datos">
+                            <input class="col-10 btnSimple boton" type="submit" value="Modificar datos">
                         </div>
                     </form>
                 </div>

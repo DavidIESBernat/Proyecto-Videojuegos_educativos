@@ -24,8 +24,8 @@
                     </ul>
                 </div>
                 <div class="col-sm-12 col-md-8 col-lg-8 columnas principal">
-                    <h1>Modificar mis datos</h1>
-                    <form action="?controlador=usuario&accion=modificarContraseña" method="post">
+                    <h1>Modificar contraseña</h1>
+                    <form action="?controlador=usuario&accion=modificarContraseña" method="post" class="row">
                         <div class="col-12">
                             <label class="col-10">Contraseña actual</label>
                             <input class="col-10" type="password" name="contraseña_actual" placeholder="">
@@ -39,7 +39,7 @@
                             <input class="col-10" type="password" name="repetir_contraseña_nueva" placeholder="">
                         </div>
                         <div class="col-12">
-                            <input class="btnSimple boton" type="submit" value="Modificar contraseña">
+                            <input class="col-10 btnSimple boton" type="submit" value="Modificar contraseña">
                         </div>
                         
                     </form>

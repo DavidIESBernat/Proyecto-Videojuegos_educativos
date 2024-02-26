@@ -10,7 +10,7 @@
     <div class="container-fluid mainContainer">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
-                <div class="col-sm-12 col-md-4 col-lg-4 columnas">
+                <div class="col-12 col-md-4 columnas">
                     <ul>
                         <a href="?controlador=usuario"><li>Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li class="active">Biblioteca</li></a>
@@ -19,7 +19,7 @@
                         <a href="?controlador=usuario&accion=logout"><li>Cerrar sesión</li></a>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-8 col-lg-8 columnas principal">
+                <div class="col-12 col-md-8 columnas principal row">
                     <h1>Mi biblioteca de juegos</h1>
                     <?php
                         foreach($juegos_usuarios as $juego_usuario) {

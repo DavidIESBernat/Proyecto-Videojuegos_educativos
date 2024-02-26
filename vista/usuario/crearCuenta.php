@@ -10,7 +10,7 @@
     <div class="container-fluid mainContainer">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-12 col-lg-12 columna">
+                <div class="col-sm-12 columna">
                     <form action="?controlador=usuario&accion=crearUsuario" method="post">
                         <h1 class="primary">Crear cuenta</h1>
                         <label>Correo</label>
