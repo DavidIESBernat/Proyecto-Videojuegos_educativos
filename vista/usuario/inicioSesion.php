@@ -17,7 +17,7 @@
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
 
                         <label>Contraseña</label>
-                        <input type="password" name="contraseña" placeholder="Contraseña1234" minLength="8">
+                        <input type="password" name="contraseña" placeholder="Contraseña1234">
 
                         <div class="boton-y-enlace">
                             <input type="submit" value="Iniciar sesión">

@@ -12,6 +12,21 @@
 </head>
 <body>
     <?php
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="alert alert-danger" role="alert">
+            <?php
+                $error_code = $_GET['error'];
+                if ($error_code == 1) {
+                    echo "La contraseña actual es incorrecta.";
+                } else if ($error_code == 2) {
+                    echo "Las contraseñas no coinciden.";
+                }
+            ?>
+        </div>
+    <?php
+        }
+
         foreach($usuarios as $usuario) {
             if ($usuario->getId_usuario() == $id_usuario) {
     ?>

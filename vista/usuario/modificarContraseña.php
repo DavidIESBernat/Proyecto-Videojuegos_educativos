@@ -12,6 +12,19 @@
 </head>
 <body>
     <?php
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="alert alert-success" role="alert">
+            <?php
+                $error_code = $_GET['error'];
+                if ($error_code == 0) {
+                    echo "Contraseña modificada con exito.";
+                }
+            ?>
+        </div>
+    <?php
+        }
+
         foreach($usuarios as $usuario) {
             if ($usuario->getId_usuario() == $id_usuario) {
     ?>

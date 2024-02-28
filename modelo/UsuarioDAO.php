@@ -50,17 +50,18 @@
             $result = $con->query("SELECT contraseña FROM usuarios WHERE id_usuario = '$id_usuario'");
             $row = $result->fetch_assoc();
             $contraseña_actual_bbdd = $row['contraseña'];
-
+        
             if ($contraseña_actual_bbdd == $contraseña_actual) {
                 if ($contraseña_nueva == $repetir_contraseña_nueva) {
                     $con->query("UPDATE usuarios SET `contraseña` = '$contraseña_nueva' WHERE id_usuario = '$id_usuario'");
-                    header('Location:'.url.'?controlador=usuario');
+                    header('Location:' . url . '?controlador=usuario&error=0');
                 } else {
-                    header('Location:'.url.'?controlador=usuario&accion=paginaModificarContraseña');
+                    header('Location:' . url . '?controlador=usuario&accion=paginaModificarContraseña&error=2');
                 }
             } else {
-                header('Location:'.url.'?controlador=usuario&accion=paginaModificarContraseña');
+                header('Location:' . url . '?controlador=usuario&accion=paginaModificarContraseña&error=1');
             }   
         }
+        
     }
 ?>
