@@ -14,25 +14,25 @@
                     <form action="?controlador=usuario&accion=crearUsuario" method="post">
                         <h1 class="primary">Crear cuenta</h1>
                         <label>Correo</label>
-                        <input type="email" name="correo" placeholder="ejemplo@correo.com">
+                        <input class="campoInput" type="email" name="correo" placeholder="ejemplo@correo.com">
 
                         <label>Contraseña</label>
-                        <input type="password" name="contraseña" placeholder="Contraseña1234">
+                        <input class="campoInput" type="password" name="contraseña" placeholder="Contraseña1234">
 
                         <label>Confirmar contraseña</label>
-                        <input type="password" name="confirmar_contraseña" placeholder="Contraseña1234">
+                        <input class="campoInput" type="password" name="confirmar_contraseña" placeholder="Contraseña1234">
 
                         <label>Nombre</label>
-                        <input type="text" name="nombre" placeholder="Juan">
+                        <input class="campoInput" type="text" name="nombre" placeholder="Juan">
 
                         <label>Apellido</label>
-                        <input type="text" name="apellido" placeholder="García">
+                        <input class="campoInput" type="text" name="apellido" placeholder="García">
                         
                         <label>Fecha nacimiento</label>
-                        <input type="date" name="fecha_nacimiento" placeholder="18">
+                        <input class="campoInput" type="date" name="fecha_nacimiento" placeholder="18">
 
                         <div class="boton-y-enlace">
-                            <input type="submit" value="Crear cuenta">
+                            <input class="btnEnviar" type="submit" value="Crear cuenta">
                             <p>¿Ya tienes una cuenta? <a href="?controlador=usuario&accion=paginaIniciarSesion">Inicia sesión</a></p>
                         </div>
                     </form>

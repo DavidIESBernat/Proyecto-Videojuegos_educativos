@@ -50,3 +50,11 @@ a {
 .botonUsuario {
     color: var(--color1);
     }
+
+.campoInput {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    box-sizing: border-box;
+}

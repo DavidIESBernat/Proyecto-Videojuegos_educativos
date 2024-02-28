@@ -28,15 +28,15 @@
                     <form action="?controlador=usuario&accion=modificarContraseña" method="post" class="row">
                         <div class="col-12">
                             <label class="col-10">Contraseña actual</label>
-                            <input class="col-10" type="password" name="contraseña_actual" placeholder="">
+                            <input class="campoInput col-10" type="password" name="contraseña_actual" placeholder="">
                         </div>
                         <div class="col-12">
                             <label class="col-10">Nueva Contraseña</label>
-                            <input class="col-10" type="password" name="contraseña_nueva" placeholder="">
+                            <input class="campoInput col-10" type="password" name="contraseña_nueva" placeholder="">
                         </div>
                         <div class="col-12">
                             <label class="col-10">Repetir Contraseña</label>
-                            <input class="col-10" type="password" name="repetir_contraseña_nueva" placeholder="">
+                            <input class="campoInput col-10" type="password" name="repetir_contraseña_nueva" placeholder="">
                         </div>
                         <div class="col-12">
                             <input class="col-10 btnSimple boton" type="submit" value="Modificar contraseña">

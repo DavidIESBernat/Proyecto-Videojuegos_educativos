@@ -14,10 +14,10 @@
                     <form action="?controlador=usuario&accion=iniciarSesion" method="post">
                         <h1 class="primary">Iniciar sesión</h1>
                         <label>Correo</label>
-                        <input type="email" name="correo" placeholder="ejemplo@correo.com">
+                        <input class="campoInput" type="email" name="correo" placeholder="ejemplo@correo.com">
 
                         <label>Contraseña</label>
-                        <input type="password" name="contraseña" placeholder="Contraseña">
+                        <input class="campoInput" type="password" name="contraseña" placeholder="Contraseña">
 
                         <div class="boton-y-enlace">
                             <input class="btnEnviar" type="submit" value="Iniciar sesión">
