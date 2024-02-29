@@ -8,6 +8,21 @@
     <title>Registro</title>
 </head>
 <body class="cuerpo">
+    <?php
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="alert alert-danger" role="alert">
+        <?php
+            $error_code = $_GET['error'];
+            if ($error_code == 1) {
+                echo "Rellena todos los campos.";
+            }
+        ?>
+    </div>
+    <?php
+        }
+    ?>
+
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
@@ -18,7 +33,7 @@
                         <input type="email" name="correo" placeholder="ejemplo@correo.com">
 
                         <label>Contraseña</label>
-                        <input type="password" name="contraseña" placeholder="Contraseña1234">
+                        <input type="password" name="contraseña" placeholder="Contraseña1234" minLength="8">
 
                         <label>Confirmar contraseña</label>
                         <input type="password" name="confirmar_contraseña" placeholder="Contraseña1234" minLength="8">

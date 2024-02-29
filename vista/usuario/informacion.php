@@ -14,13 +14,15 @@
     <?php
         if (isset($_GET['error'])) {
     ?>
-        <div class="alert alert-danger" role="alert">
+        <div class="alert alert-success" role="alert">
             <?php
                 $error_code = $_GET['error'];
-                if ($error_code == 1) {
-                    echo "La contraseña actual es incorrecta.";
+                if ($error_code == 0) {
+                    echo "La contraseña ha sido modificada correctamente.";
+                } else if ($error_code == 1) {
+                    echo "Tus datos han sido modificados correctamente.";
                 } else if ($error_code == 2) {
-                    echo "Las contraseñas no coinciden.";
+                    echo "Has iniciado sesión correctamente.";
                 }
             ?>
         </div>

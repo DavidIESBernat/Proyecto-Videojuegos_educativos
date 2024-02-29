@@ -8,6 +8,21 @@
     <title>Inicio de Sesión</title>
 </head>
 <body>
+    <?php
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="alert alert-success" role="alert">
+        <?php
+            $error_code = $_GET['error'];
+            if ($error_code == 1) {
+                echo "Cuenta creada correctamente.";
+            }
+        ?>
+    </div>
+    <?php
+        }
+    ?>
+
     <div class="container-fluid">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">

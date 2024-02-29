@@ -14,14 +14,18 @@
     <?php
         if (isset($_GET['error'])) {
     ?>
-        <div class="alert alert-success" role="alert">
-            <?php
-                $error_code = $_GET['error'];
-                if ($error_code == 0) {
-                    echo "Contraseña modificada con exito.";
-                }
-            ?>
-        </div>
+        <div class="alert alert-danger" role="alert">
+        <?php
+            $error_code = $_GET['error'];
+            if ($error_code == 1) {
+                echo "La contraseña actual es incorrecta.";
+            } else if ($error_code == 2) {
+                echo "Las nuevas contraseñas no coinciden.";
+            } else if ($error_code == 3) {
+                echo "Rellena todos los campos.";
+            }
+        ?>
+    </div>
     <?php
         }
 
@@ -44,13 +48,13 @@
                     <h1>Modificar mis datos</h1>
                     <form action="?controlador=usuario&accion=modificarContraseña" method="post">
                         <label>Contraseña actual</label>
-                        <input type="password" name="contraseña_actual">
+                        <input type="password" name="contraseña_actual" minLength="8">
 
                         <label>Confirmar nueva</label>
-                        <input type="password" name="contraseña_nueva" placeholder="8 carácteres mínimo">
+                        <input type="password" name="contraseña_nueva" placeholder="8 carácteres mínimo" minLength="8">
 
                         <label>Confirmar nueva contraseña</label>
-                        <input type="password" name="repetir_contraseña_nueva">
+                        <input type="password" name="repetir_contraseña_nueva" minLength="8">
 
                         <input type="submit" value="Modificar datos">
                     </form>

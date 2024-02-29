@@ -28,7 +28,7 @@
             $_SESSION['Usuario'] = $usuario;
         }
 
-        public static function crearUsuario($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento) {
+        public static function crearUsuario($correo, $nombre, $apellido, $contraseña, $confirmar_contraseña, $fecha_nacimiento) {
             $con = dataBase::connect();
             
             if ($contraseña == $confirmar_contraseña) {
@@ -42,7 +42,7 @@
             $con = dataBase::connect();
             
             $con->query("UPDATE usuarios SET `correo` = '$correo', `nombre` = '$nombre', `apellido` = '$apellido', `fecha_nacimiento` = '$fecha_nacimiento' WHERE id_usuario = '$id_usuario'");   
-            header('Location:'.url.'?controlador=usuario');
+            header('Location:' . url . '?controlador=usuario&error=1');
         }
 
         public static function modificarContraseña($contraseña_actual, $contraseña_nueva, $repetir_contraseña_nueva, $id_usuario) {

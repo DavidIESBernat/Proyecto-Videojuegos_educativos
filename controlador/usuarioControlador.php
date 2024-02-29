@@ -45,23 +45,26 @@
                 $contraseña = $_POST['contraseña'];
 
                 UsuarioDAO::iniciarSesion($correo, $contraseña);
-                header('Location:'.url.'?controlador=principal');
+                header('Location:'.url.'?controlador=usuario&error=2');
             }
         }
 
         public static function crearUsuario() {
-            if (isset($_POST['correo'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
+            if (!empty($_POST['correo']) && !empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['contraseña']) && !empty($_POST['confirmar_contraseña']) && !empty($_POST['fecha_nacimiento'])) {
                 $correo = $_POST['correo']; 
                 $nombre = $_POST['nombre'];
                 $apellido = $_POST['apellido'];
+                $contraseña = $_POST['contraseña'];
+                $confirmar_contraseña = $_POST['confirmar_contraseña'];
                 $fecha_nacimiento = $_POST['fecha_nacimiento'];
-
-                UsuarioDAO::crearUsuario($correo, $nombre, $apellido, $fecha_nacimiento);
-                header('Location:'.url.'?controlador=usuario&accion=paginaIniciarSesion');
+        
+                UsuarioDAO::crearUsuario($correo, $nombre, $apellido, $contraseña, $confirmar_contraseña, $fecha_nacimiento);
+                header('Location:'.url.'?controlador=usuario&accion=paginaIniciarSesion&error=1');
             } else {
-                header('Location:'.url.'?controlador=usuario&accion=paginaRegistro');
+                header('Location:'.url.'?controlador=usuario&accion=paginaRegistro&error=1');
             }
         }
+        
 
         // Viajar entre las páginas de mi cuenta
         public static function bibliotecaJuegos() {
@@ -100,7 +103,6 @@
                 $id_usuario = $_SESSION['Usuario']->getId_usuario();
             
                 UsuarioDAO::modificarDatos($correo, $nombre, $apellido, $fecha_nacimiento, $id_usuario);
-                header('Location:'.url.'?controlador=usuario');
                 
             } else {
                 header('Location:'.url.'?controlador=usuario&accion=modificarDatos');
@@ -129,7 +131,7 @@
 
                 UsuarioDAO::modificarContraseña($contraseña_actual, $contraseña_nueva, $repetir_contraseña_nueva, $id_usuario);
             } else {
-                header('Location:'.url.'?controlador=usuario&accion=paginaModificarContraseña');
+                header('Location:' . url . '?controlador=usuario&accion=paginaModificarContraseña&error=3');
             }
 
         }
