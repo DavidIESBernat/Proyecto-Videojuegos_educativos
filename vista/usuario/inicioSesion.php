@@ -10,16 +10,24 @@
 <body>
     <?php
         if (isset($_GET['error'])) {
-    ?>
-        <div class="alert alert-success" role="alert">
-        <?php
             $error_code = $_GET['error'];
             if ($error_code == 1) {
-                echo "Cuenta creada correctamente.";
-            }
+    ?>
+    <div class="alert alert-success" role="alert">
+        <?php
+            echo "Cuenta creada correctamente.";
         ?>
     </div>
     <?php
+            } else if ($error_code == 2) {
+    ?>
+    <div class="alert alert-danger" role="alert">
+        <?php
+            echo "Rellena todos los campos para iniciar sesión.";
+        ?>
+    </div>
+    <?php
+            }
         }
     ?>
 

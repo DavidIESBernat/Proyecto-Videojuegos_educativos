@@ -40,12 +40,14 @@
         }
 
         public static function iniciarSesion() {
-            if (isset($_POST['correo'], $_POST['contraseña'])) {
+            if (!empty($_POST['correo']) && !empty($_POST['contraseña'])) {
                 $correo = $_POST['correo'];
                 $contraseña = $_POST['contraseña'];
 
                 UsuarioDAO::iniciarSesion($correo, $contraseña);
                 header('Location:'.url.'?controlador=usuario&error=2');
+            } else {
+                header('Location:' . url . '?controlador=usuario&accion=paginaIniciarSesion&error=2');
             }
         }
 
