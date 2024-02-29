@@ -18,14 +18,15 @@
         public static function iniciarSesion($correo, $contraseña) {
             $con = dataBase::connect();
 
-            $result = $con->query("SELECT rol FROM usuarios WHERE correo = '$correo' AND contraseña = '$contraseña' LIMIT 1;");
-            $row = $result->fetch_assoc();
-            $_SESSION['rolUsuario'] = $row['rol'];
-
             $result = $con->query("SELECT * FROM usuarios WHERE correo = '$correo' AND contraseña = '$contraseña' LIMIT 1;");
             $usuario = $result->fetch_object('Usuario');
 
-            $_SESSION['Usuario'] = $usuario;
+            if ($usuario != null) {
+                $_SESSION['Usuario'] = $usuario;
+                header('Location:'.url.'?controlador=usuario&error=2');
+            } else {
+                header('Location:' . url . '?controlador=usuario&accion=paginaIniciarSesion&error=3');
+            }
         }
 
         public static function crearUsuario($correo, $nombre, $apellido, $contraseña, $confirmar_contraseña, $fecha_nacimiento) {

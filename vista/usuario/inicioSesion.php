@@ -27,6 +27,14 @@
         ?>
     </div>
     <?php
+            } else if ($error_code == 3) {
+    ?>
+    <div class="alert alert-danger" role="alert">
+        <?php
+            echo "Error al iniciar sesión. Credenciales incorrectas.";
+        ?>
+    </div>
+    <?php
             }
         }
     ?>
