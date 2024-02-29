@@ -8,7 +8,7 @@
     <title>Mostrar juego - Aprende Jugando</title>
 </head>
 <body>
-    <div class="containerGame flex-column">
+    <div class="containerGame flex-column height100">
         <div class="containerGameTop">
             <a href="?controlador=biblioteca" class="btnVolver"><span class="flecha"><</span> Volver</a>
         </div>

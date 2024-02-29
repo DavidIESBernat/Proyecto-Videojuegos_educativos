@@ -8,10 +8,27 @@
 </head>
 <body>
     <?php
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="alert alert-danger textCenter" role="alert">
+        <?php
+            $error_code = $_GET['error'];
+            if ($error_code == 1) {
+                echo "La contraseña actual es incorrecta.";
+            } else if ($error_code == 2) {
+                echo "Las nuevas contraseñas no coinciden.";
+            } else if ($error_code == 3) {
+                echo "Rellena todos los campos.";
+            }
+        ?>
+    </div>
+    <?php
+        }
+
         foreach($usuarios as $usuario) {
             if ($usuario->getId_usuario() == $id_usuario) {
     ?>
-    <div class="container-fluid mainContainer">
+    <div class="container-fluid mainContainer height100">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
                 <div class="col-sm-12 col-md-4 col-lg-4 columnas">
@@ -38,6 +55,14 @@
                             <label class="col-10">Repetir Contraseña</label>
                             <input class="campoInput col-10" type="password" name="repetir_contraseña_nueva" placeholder="">
                         </div>
+                        <?php
+                        if(isset($_GET['error'])) {
+                            if($_GET['error'] == "nueva") {
+                                ?><p class="p-no-margin error">Los campos de la nueva contraseña no coinciden</p>
+                            <?php } else if($_GET['error']) { ?>
+                                <p class="p-no-margin error">La contraseña actual no es correcta</p>
+                            <?php } 
+                        }?>
                         <div class="col-12">
                             <input class="col-10 btnSimple boton" type="submit" value="Modificar contraseña">
                         </div>

@@ -7,7 +7,38 @@
     <title>Iniciar Sesion - Aprende Jugando</title>
 </head>
 <body>
-    <div class="container-fluid mainContainer">
+<?php
+        if (isset($_GET['error'])) {
+            $error_code = $_GET['error'];
+            if ($error_code == 1) {
+    ?>
+    <div class="alert alert-success" role="alert">
+        <?php
+            echo "Cuenta creada correctamente.";
+        ?>
+    </div>
+    <?php
+            } else if ($error_code == 2) {
+    ?>
+    <div class="alert alert-danger" role="alert">
+        <?php
+            echo "Rellena todos los campos para iniciar sesión.";
+        ?>
+    </div>
+    <?php
+            } else if ($error_code == 3) {
+    ?>
+    <div class="alert alert-danger" role="alert">
+        <?php
+            echo "Error al iniciar sesión. Credenciales incorrectas.";
+        ?>
+    </div>
+    <?php
+            }
+        }
+    ?>
+
+    <div class="container-fluid mainContainer height100">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
                 <div class="col-12 columna ">

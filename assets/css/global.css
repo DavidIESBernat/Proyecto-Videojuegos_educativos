@@ -26,6 +26,7 @@ body { /*Actua sobre el body definiendo el mismo*/
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+
 .flex-row {
     display: flex;
     flex-direction: row;
@@ -53,6 +54,10 @@ body { /*Actua sobre el body definiendo el mismo*/
     box-shadow: 0 16px 16px rgba(0, 0, 0, 0.25); 
 }
 
+.height100 {
+    height: 100%;
+    margin-bottom: -120px;
+}
 .alignCenter {
     display: flex;
     align-items: center;
@@ -109,4 +114,28 @@ font-weight: 600;
     padding-left: 20px;
     padding-right: 20px;
     height: 40px;
+}
+
+.alert-success {
+background-color: var(--color5);
+font-weight: 600;
+border: none;
+border-radius: 0px;
+margin: 0;
+}
+
+.alert-danger {
+background-color: #ff3939;
+color: var(--colorPrimario);
+font-weight: 600;
+border: none;
+border-radius: 0px;
+margin: 0;
+}
+
+@media only screen and (max-height: 750px) {
+    .height100 {
+        height: 100%;
+        margin-bottom: 0px;
+    }
 }

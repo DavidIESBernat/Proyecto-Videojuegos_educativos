@@ -7,14 +7,36 @@
     <title>Informacion Usuario - Aprende Jugando</title>
 </head>
 <body>
+<?php
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="alert alert-success textCenter" role="alert">
+            <?php
+                $error_code = $_GET['error'];
+                if ($error_code == 0) {
+                    echo "La contraseña ha sido modificada correctamente.";
+                } else if ($error_code == 1) {
+                    echo "Tus datos han sido modificados correctamente.";
+                } else if ($error_code == 2) {
+                    echo "Has iniciado sesión correctamente.";
+                }
+            ?>
+        </div>
     <?php
+        }
+
         foreach($usuarios as $usuario) {
             if ($usuario->getId_usuario() == $id_usuario) {
     ?>
-    <div class="container-fluid mainContainer">
+    <div class="container-fluid mainContainer height100">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
                 <div class="col-12 col-lg-4 columnas">
+                    <?php if(isset($_GET['modificada'])) { ?>
+                        <div class="">
+                            <p class="p-no-margin">Contraseña modificada con exito.</p>
+                        </div>
+                    <?php } ?>
                     <ul>
                         <a href="?controlador=usuario"><li class="active">Mi cuenta</li></a>
                         <a href="?controlador=usuario&accion=bibliotecaJuegos"><li>Biblioteca</li></a>

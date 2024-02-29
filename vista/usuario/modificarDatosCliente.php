@@ -11,7 +11,7 @@
         foreach($usuarios as $usuario) {
             if ($usuario->getId_usuario() == $id_usuario) {
     ?>
-    <div class="container-fluid mainContainer">
+    <div class="container-fluid mainContainer height100">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center cuerpo">
                 <div class="col-sm-12 col-md-4 col-lg-4 columnas">

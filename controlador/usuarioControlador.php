@@ -47,30 +47,32 @@
         }
 
         public static function iniciarSesion() {
-            if (isset($_POST['correo'], $_POST['contraseña'])) {
+            if (!empty($_POST['correo']) && !empty($_POST['contraseña'])) {
                 $correo = $_POST['correo'];
                 $contraseña = $_POST['contraseña'];
 
                 UsuarioDAO::iniciarSesion($correo, $contraseña);
-                header('Location:'.url.'?controlador=principal');
+            } else {
+                header('Location:' . url . '?controlador=usuario&accion=paginaIniciarSesion&error=2');
             }
         }
 
         public static function crearUsuario() {
-            if (isset($_POST['correo'], $_POST['contraseña'], $_POST['confirmar_contraseña'], $_POST['nombre'], $_POST['apellido'], $_POST['fecha_nacimiento'])) {
+            if (!empty($_POST['correo']) && !empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['contraseña']) && !empty($_POST['confirmar_contraseña']) && !empty($_POST['fecha_nacimiento'])) {
                 $correo = $_POST['correo']; 
-                $contraseña = $_POST['contraseña'];
-                $confirmar_contraseña = $_POST['confirmar_contraseña']; 
                 $nombre = $_POST['nombre'];
                 $apellido = $_POST['apellido'];
+                $contraseña = $_POST['contraseña'];
+                $confirmar_contraseña = $_POST['confirmar_contraseña'];
                 $fecha_nacimiento = $_POST['fecha_nacimiento'];
-
-                UsuarioDAO::crearUsuario($correo, $contraseña, $confirmar_contraseña, $nombre, $apellido, $fecha_nacimiento);
-                header('Location:'.url.'?controlador=usuario&accion=paginaIniciarSesion');
+        
+                UsuarioDAO::crearUsuario($correo, $nombre, $apellido, $contraseña, $confirmar_contraseña, $fecha_nacimiento);
+                header('Location:'.url.'?controlador=usuario&accion=paginaIniciarSesion&error=1');
             } else {
-                header('Location:'.url.'?controlador=usuario&accion=paginaRegistro');
+                header('Location:'.url.'?controlador=usuario&accion=paginaRegistro&error=1');
             }
         }
+        
 
         // Viajar entre las páginas de mi cuenta
         public static function bibliotecaJuegos() {
@@ -88,7 +90,6 @@
         }
 
         public static function modificarDatos() {
-            
             if (!isset($_GET['controlador'])) {
                 include_once 'vista/home.php';
             } else {
@@ -110,7 +111,6 @@
                 $id_usuario = $_SESSION['Usuario']->getId_usuario();
             
                 UsuarioDAO::modificarDatos($correo, $nombre, $apellido, $fecha_nacimiento, $id_usuario);
-                header('Location:'.url.'?controlador=usuario');
                 
             } else {
                 header('Location:'.url.'?controlador=usuario&accion=modificarDatos');
@@ -139,10 +139,11 @@
 
                 UsuarioDAO::modificarContraseña($contraseña_actual, $contraseña_nueva, $repetir_contraseña_nueva, $id_usuario);
             } else {
-                header('Location:'.url.'?controlador=usuario&accion=paginaModificarContraseña');
+                header('Location:' . url . '?controlador=usuario&accion=paginaModificarContraseña&error=3');
             }
 
         }
+        
         public static function logout() {
             session_start(); 
             unset($_SESSION['Usuario']);

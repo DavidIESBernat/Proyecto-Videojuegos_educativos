@@ -7,6 +7,20 @@
     <title>Registro - Aprende Jugando</title>
 </head>
 <body>
+    <?php
+        if (isset($_GET['error'])) {
+    ?>
+        <div class="alert alert-danger textCenter" role="alert">
+        <?php
+            $error_code = $_GET['error'];
+            if ($error_code == 1) {
+                echo "Rellena todos los campos.";
+            }
+        ?>
+    </div>
+    <?php
+        }
+    ?>
     <div class="container-fluid mainContainer">
         <div class="d-flex justify-content-center">
             <div class="row justify-content-center">
